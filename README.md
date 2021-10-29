@@ -1,4 +1,4 @@
-<!-- Car nodes
+Car nodes
 
 Background
 
@@ -48,4 +48,4 @@ Implementation Timeline
 •	Monday: Dedicate this day toward implementing the underlying logic for Car nodes. Connecting each level with each other. 
 •	Tuesday: Start using Canvas to design the nodes and the interactive aspect of the pages;
 •	Wedneday: Finish implementing the interactive features and the designs of the page. 
-•	Thursday Morning: Deploy to Github.   -->
+•	Thursday Morning: Deploy to Github.  
