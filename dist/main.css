@@ -1,0 +1,95 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+
+    h1 {
+      text-align: center;
+    }
+    
+    body {
+      background-color: #778899;
+    }
+
+    .main-node {
+        position: relative;
+        width: 24em;
+        height: 24em;
+        padding: 2.8em;
+        border: solid 1px;
+        border-radius: 50%;
+        margin: 1.75em auto 0;
+        align-self: center;
+    }
+    .main-node div, a {
+        position: absolute;
+        top: 50%; left: 50%;
+        width: 4em; height: 4em;
+        margin: -2em;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 4em;
+    }
+    
+    .center {
+      height: 50px;
+      width: 25px;
+      background-color: azure;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .node1 { 
+      transform: translate(15em);
+      height: 15px;
+      width: 15px;
+      background-color: gainsboro;
+      border-radius: 25%;
+      display: inline-block;
+    } 
+
+    .node2 { 
+      transform: rotate(60deg) translate(15em) rotate(-60deg);
+      height: 15px;
+      width: 15px;
+      background-color: gainsboro;
+      border-radius: 25%;
+      display: inline-block;
+     }
+
+    .node3 { 
+      transform: rotate(120deg) translate(15em) rotate(-120deg); 
+      height: 15px;
+      width: 15px;
+      background-color: gainsboro;
+      border-radius: 25%;
+      display: inline-block;
+    }
+
+    .node4 { 
+      transform: translate(-15em); 
+      height: 15px;
+      width: 15px;
+      background-color: gainsboro;
+      border-radius: 25%;
+      display: inline-block;
+    }
+
+    .node5 { 
+      transform: rotate(240deg) translate(15em) rotate(-240deg);
+      height: 15px;
+      width: 15px;
+      background-color: gainsboro;
+      border-radius: 25%;
+      display: inline-block;
+     }
+
+    .node6 { 
+      transform: rotate(300deg) translate(15em) rotate(-300deg); 
+      height: 15px;
+      width: 15px;
+      background-color: gainsboro;
+      border-radius: 25%;
+      display: inline-block;
+    }
+
+
