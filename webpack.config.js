@@ -30,15 +30,35 @@ const config = {
       }
     ],
   },
+  resolve: {
+    fallback: {
+      "fs": false,
+      "tls": false,
+      "net": false,
+      "path": false,
+      "zlib": false,
+      "http": false,
+      "https": false,
+      "stream": false,
+      "crypto": false,
+      "constants": false,
+      "os": false,
+      "vm": false
+
+    }
+  },
+  
   plugins: [new MiniCssExtractPlugin()],
 };
-
+  const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 module.exports = (env, argv) => {
   if (argv.mode === 'production') {
     config.devtool = 'source-map';
   } else {
     config.devtool = 'eval-source-map';
   }
-
+  plugins: [
+    new NodePolyfillPlugin()
+  ]
   return config;
 }

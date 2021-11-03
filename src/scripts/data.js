@@ -1,11 +1,11 @@
-const node1 = document.getElementsByClassName('node1');
-const node2 = document.getElementsByClassName('node2');
-const node3 = document.getElementsByClassName('node3');
-const node4 = document.getElementsByClassName('node4');
-const node5 = document.getElementsByClassName('node5');
-const node6 = document.getElementsByClassName('node6');
 
-const brands = ['', '', '', '', 'Germany', 'UK']
+
+
+
+async function getData() {
+  const carsInfo = await fetch('https://vpic.nhtsa.dot.gov/api/vehicles/getmodelsformake/honda?format=json')
+  
+}
 
 fetch('http://example.com/movies.json')
   .then(response => response.json())
