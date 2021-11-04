@@ -1,13 +1,49 @@
+// import fetchCarInfo from "../src/scripts/data.js"
+
 document.addEventListener('DOMContentLoaded', () => {
-  const center = document.getElementsByClassName('center')[0]
+  const center = document.getElementsByClassName('center')[0];
   const node1 = document.getElementsByClassName('node1')[0];
   const node2 = document.getElementsByClassName('node2')[0];
   const node3 = document.getElementsByClassName('node3')[0];
   const node4 = document.getElementsByClassName('node4')[0];
   const node5 = document.getElementsByClassName('node5')[0];
   const node6 = document.getElementsByClassName('node6')[0];
+  const carsImg = document.getElementsByClassName('carsImg');
+  // fetchCarInfo();
+  // console.log(test);
 
+  
 
+  center.addEventListener('click', () => {
+    // let countries = [USA, Korea, Japan, Italy, Germany, Uk];
+    // if I click on one of these countries then the array axis 
+    // will change to the car makers of that specific county
+    // the array axis 
+    let center = document.createElement('div');
+    center.classList.add('mainCountries');
+    node1.innerText = 'USA'
+    node2.innerText = 'Korea'
+    node3.innerText = 'Japan'
+    node4.innerText = 'Italy'
+    node5.innerText = 'Germany'
+    node6.innerText = 'UK'
+    center.append(center)
+    node1.append(center);
+    node2.append(center);
+    node3.append(center);
+    node4.append(center);
+    node5.append(center);
+    node6.append(center);
+    node1.style.backgroundImage = 'none';
+    node1.style.backgroundColor = 'gainsboro';
+  })
+  
+  // console.log()
+  // if (node1.innerText !== 'USA') {
+  //   console.log(node1.innerText === 'USA')
+  //   node1.style.backgroundImage = 'none';
+  //   node1.style.backgroundColor = 'gainsboro';
+  // }
   node1.addEventListener('click', () => {
     let newNode1 = document.createElement('div');
     newNode1.classList.add('usa_cars');
@@ -25,37 +61,30 @@ document.addEventListener('DOMContentLoaded', () => {
     node4.append(newNode1);
     node5.append(newNode1);
     node6.append(newNode1);
-  })
-
-  node2.addEventListener('click', () => {
-    let newNode2 = document.createElement('div');
-    newNode2.classList.add('korea_cars');
-    center.innerText = 'Korea'
-    node1.innerText = 'Kia'
-    node2.innerText = 'Hyundai'
-    node3.innerText = 'Genesis'
-    node4.innerText = 'Ssangyong'
-    node5.innerText = 'Daewoo'
-    node6.innerText = 'Samsung'
-    center.append(newNode2)
-    node1.append(newNode2);
-    node2.append(newNode2);
-    node3.append(newNode2);
-    node4.append(newNode2);
-    node5.append(newNode2);
-    node6.append(newNode2);
+    node1.style.backgroundImage = 'none';
+    node1.style.backgroundColor = 'gainsboro';
+    node2.style.backgroundImage = 'none';
+    node2.style.backgroundColor = 'gainsboro';
+    node3.style.backgroundImage = 'none';
+    node3.style.backgroundColor = 'gainsboro';
+    node4.style.backgroundImage = 'none';
+    node4.style.backgroundColor = 'gainsboro';
+    node5.style.backgroundImage = 'none';
+    node5.style.backgroundColor = 'gainsboro';
+    node6.style.backgroundImage = 'none';
+    node6.style.backgroundColor = 'gainsboro';
   })
 
   node3.addEventListener('click', () => {
     let newNode3 = document.createElement('div');
-    newNode3.classList.add('japan_cars');
-    center.innerText = 'Japan'
-    node1.innerText = 'Honda'
-    node2.innerText = 'Acura'
-    node3.innerText = 'Toyota'
-    node4.innerText = 'Lexus'
-    node5.innerText = 'Nissan'
-    node6.innerText = 'Infiniti'
+    newNode3.classList.add('volkwagen_cars');
+    center.innerText = 'Volkswagen'
+    node1.innerText = 'Atlas'
+    node2.innerText = 'Tiguan'
+    node3.innerText = 'Golf'
+    node4.innerText = 'Jetta'
+    node5.innerText = 'Passat'
+    node6.innerText = 'id.4'
     center.append(newNode3)
     node1.append(newNode3);
     node2.append(newNode3);
@@ -63,8 +92,105 @@ document.addEventListener('DOMContentLoaded', () => {
     node4.append(newNode3);
     node5.append(newNode3);
     node6.append(newNode3);
+    
+    console.log(center[0]);
+    console.log(center);
+
+    
+    node1.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/atlas.png"
+      carsImg[0].style = 'display: true'
+    })
+    node1.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/atlas.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+
+    node2.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/tiguan.png"
+      carsImg[0].style = 'display: true'
+    })
+    node2.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/tiguan.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+
+    node3.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/golf.png"
+      carsImg[0].style = 'display: true'
+    })
+    node3.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/golf.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+
+    node4.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/jetta.png"
+      carsImg[0].style = 'display: true'
+    })
+    node4.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/jetta.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+
+    node5.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/passat.png"
+      carsImg[0].style = 'display: true'
+    })
+    node5.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/passat.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+
+    node6.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/id.4.png"
+      carsImg[0].style = 'display: true'
+    })
+    node6.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/id.4.png"
+      carsImg[0].style = 'display: none'
+    })
+
+    node3.style.backgroundImage = 'none';
+    node3.style.backgroundColor = 'gainsboro';
+
   })
 
+  node2.addEventListener('click', () => {
+    let newNode2 = document.createElement('div');
+    newNode2.classList.add('japan_cars');
+    center.innerText = 'Japan'
+    node1.innerText = 'Honda'
+    node2.innerText = 'Acura'
+    node3.innerText = 'Toyota'
+    node4.innerText = 'Lexus'
+    node5.innerText = 'Nissan'
+    node6.innerText = 'Infiniti'
+    center.append(newNode2)
+    node1.append(newNode2);
+    node2.append(newNode2);
+    node3.append(newNode2);
+    node4.append(newNode2);
+    node5.append(newNode2);
+    node6.append(newNode2);
+    node1.style.backgroundImage = 'none';
+    node1.style.backgroundColor = 'gainsboro';
+    node2.style.backgroundImage = 'none';
+    node2.style.backgroundColor = 'gainsboro';
+    node3.style.backgroundImage = 'none';
+    node3.style.backgroundColor = 'gainsboro';
+    node4.style.backgroundImage = 'none';
+    node4.style.backgroundColor = 'gainsboro';
+    node5.style.backgroundImage = 'none';
+    node5.style.backgroundColor = 'gainsboro';
+    node6.style.backgroundImage = 'none';
+    node6.style.backgroundColor = 'gainsboro';
+  })
 
   node4.addEventListener('click', () => {
     let newNode4 = document.createElement('div');
@@ -83,6 +209,18 @@ document.addEventListener('DOMContentLoaded', () => {
     node4.append(newNode4);
     node5.append(newNode4);
     node6.append(newNode4);
+    node1.style.backgroundImage = 'none';
+    node1.style.backgroundColor = 'gainsboro';
+    node2.style.backgroundImage = 'none';
+    node2.style.backgroundColor = 'gainsboro';
+    node3.style.backgroundImage = 'none';
+    node3.style.backgroundColor = 'gainsboro';
+    node4.style.backgroundImage = 'none';
+    node4.style.backgroundColor = 'gainsboro';
+    node5.style.backgroundImage = 'none';
+    node5.style.backgroundColor = 'gainsboro';
+    node6.style.backgroundImage = 'none';
+    node6.style.backgroundColor = 'gainsboro';
   })
 
   node5.addEventListener('click', () => {
@@ -90,11 +228,11 @@ document.addEventListener('DOMContentLoaded', () => {
     newNode5.classList.add('german_cars');
     center.innerText = 'German'
     node1.innerText = 'Bmw'
-    node2.innerText = 'Audi'
-    node3.innerText = 'Mercedes'
-    node4.innerText = 'Volskwagen'
-    node5.innerText = 'Porsche'
-    node6.innerText = 'Maybach'
+    node2.innerText = 'Mercedes'
+    node3.innerText = 'Volkswagen'
+    node4.innerText = 'Audi'
+    node5.innerText = 'Maybach'
+    node6.innerText = 'Porsche'
     center.append(newNode5)
     node1.append(newNode5);
     node2.append(newNode5);
@@ -102,19 +240,30 @@ document.addEventListener('DOMContentLoaded', () => {
     node4.append(newNode5);
     node5.append(newNode5);
     node6.append(newNode5);
+    node1.style.backgroundImage = 'none';
+    node1.style.backgroundColor = 'gainsboro';
+    node2.style.backgroundImage = 'none';
+    node2.style.backgroundColor = 'gainsboro';
+    node3.style.backgroundImage = 'none';
+    node3.style.backgroundColor = 'gainsboro';
+    node4.style.backgroundImage = 'none';
+    node4.style.backgroundColor = 'gainsboro';
+    node5.style.backgroundImage = 'none';
+    node5.style.backgroundColor = 'gainsboro';
+    node6.style.backgroundImage = 'none';
+    node6.style.backgroundColor = 'gainsboro';
   })
-
 
   node6.addEventListener('click', () => {
     let newNode6 = document.createElement('div');
-    newNode6.classList.add('uk_cars');
-    center.innerText = 'UK'
-    node1.innerText = 'Aston Martin'
-    node2.innerText = 'Bently'
-    node3.innerText = 'Jaguar'
-    node4.innerText = 'Land Rover'
-    node5.innerText = 'Mclaren'
-    node6.innerText = 'Lotus'
+    newNode6.classList.add('porsche_cars');
+    center.innerText = 'Porsche'
+    node1.innerText = '718'
+    node2.innerText = '911'
+    node3.innerText = 'Taycan'
+    node4.innerText = 'Panamera'
+    node5.innerText = 'Macan'
+    node6.innerText = 'Cayenne'
     center.append(newNode6)
     node1.append(newNode6);
     node2.append(newNode6);
@@ -122,12 +271,101 @@ document.addEventListener('DOMContentLoaded', () => {
     node4.append(newNode6);
     node5.append(newNode6);
     node6.append(newNode6);
+
+    node1.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/718gt4.png"
+      carsImg[0].style = 'display: true'
+    })
+    node1.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/718gt4.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+    
+    node2.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/911.png"
+      carsImg[0].style = 'display: true'
+    })
+    node2.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/911.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+    
+    node3.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/taycan.png"
+      carsImg[0].style = 'display: true'
+    })
+    node3.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/taycan.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+    
+    node4.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/panamera.png"
+      carsImg[0].style = 'display: true'
+    })
+    node4.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/panamera.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+    
+    node5.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/macan.png"
+      carsImg[0].style = 'display: true'
+    })
+    node5.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/macan.png"
+      carsImg[0].style = 'display: none'
+    })
+    /*** *******************************/
+    
+    node6.addEventListener('mouseover', () => {
+      carsImg[0].src = "./png/cayenne.png"
+      carsImg[0].style = 'display: true'
+    })
+    node6.addEventListener('mouseout', () => {
+      carsImg[0].src = "./png/cayenne.png"
+      carsImg[0].style = 'display: none'
+    })
+    node1.style.backgroundImage = 'none';
+    node1.style.backgroundColor = 'gainsboro';
+    node2.style.backgroundImage = 'none';
+    node2.style.backgroundColor = 'gainsboro';
+    node3.style.backgroundImage = 'none';
+    node3.style.backgroundColor = 'gainsboro';
+    node4.style.backgroundImage = 'none';
+    node4.style.backgroundColor = 'gainsboro';
+    node5.style.backgroundImage = 'none';
+    node5.style.backgroundColor = 'gainsboro';
+    node6.style.backgroundImage = 'none';
+    node6.style.backgroundColor = 'gainsboro';
   })
 
-  function enlarge(ele) {
-    ele.style.width = "25px";
-    ele.style.height = "25px";
-  }
+  // const cars = document.getElementById("cars");
+  // const carButton = document.getElementById("carButton");
+  // const close = document.getElementsByClassName("close")[0];
 
+  // carButton.addEventListener('click', openInfo);
+  
+  // function openInfo() {
+  //   cars.style.display = "block";
+  // }
+
+  // carButton.addEventListener('click', closeInfo);
+
+  // function closeInfo() {
+  //   cars.style.display = "none";
+  // }
+
+  // window.addEventListener('click', outsideClose);
+
+  // function outsideClose (event) {
+  //   if (event.target == cars) {
+  //     cars.style.display = "none";
+  //   }
+  // }
 
 })
