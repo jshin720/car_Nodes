@@ -8,7 +8,7 @@ h1 {
 }
 
 body {
-  background-image: url("/png/bg.jpg");
+  background-image: url("https://github.com/jshin720/car_Nodes/blob/main/png/bg.jpg");
 }
 
 .main-node {
@@ -59,7 +59,7 @@ body {
   transform: translate(240px);
   height: 200px;
   width: 200px;
-  background-image: url("/png/us.png");
+  background-image: url("../png/us.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -72,7 +72,7 @@ body {
   transform: rotate(60deg) translate(240px) rotate(-60deg);
   height: 15px;
   width: 15px;
-  background-image: url("/png/skflag.jpeg");
+  background-image: url("../png/skflag.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -98,7 +98,7 @@ body {
   transform: translate(-240px);
   height: 15px;
   width: 15px;
-  background-image: url("/png/italy.png");
+  background-image: url("../png/italy.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -111,7 +111,7 @@ body {
   transform: rotate(240deg) translate(240px) rotate(-240deg);
   height: 15px;
   width: 15px;
-  background-image: url("/png/germany.png");
+  background-image: url("../png/germany.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -124,7 +124,7 @@ body {
   transform: rotate(300deg) translate(240px) rotate(-300deg);
   height: 15px;
   width: 15px;
-  background-image: url("/png/uk.png");
+  background-image: url("../png/uk.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
