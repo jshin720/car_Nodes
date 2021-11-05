@@ -49,3 +49,5 @@ Implementation Timeline
 •	Tuesday: Start using Canvas to design the nodes and the interactive aspect of the pages;
 •	Wedneday: Finish implementing the interactive features and the designs of the page. 
 •	Thursday Morning: Deploy to Github.  
+
+https://jshin720.github.io/car_Nodes/
