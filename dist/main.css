@@ -8,8 +8,7 @@ h1 {
 }
 
 body {
-  /* background-image: url("https://github.com/jshin720/car_Nodes/blob/main/png/bg.jpg"); */
-  background-image: url("../png/bg.jpg");
+  background-image: url("https://github.com/jshin720/car_Nodes/blob/main/png/bg.jpg");
 }
 
 .main-node {
@@ -86,7 +85,7 @@ body {
   transform: rotate(120deg) translate(240px) rotate(-120deg);
   height: 15px;
   width: 15px;
-  background-image: url("../png/japan.png");
+  background-image: url("/png/japan.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
