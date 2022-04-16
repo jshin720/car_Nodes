@@ -1,52 +1,44 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
+const kiCars = {
+  k1: {
+    name: "Niro EV",
+    price: "$39,990",
+    type: "Electric",
+    engine: "Permanent Magnet AC Synchronous",
+    gasMileage: "239-mile EPA ",
+    description: "The Niro EV offers the comfort and capability of a crossover with an all-electric experience. And with HOV lane privileges in select states and 291 pound-feet of torque, the Niro EV is a pleasure to drive."
+  },
+  k2: {
+    name: "K5",
+    price: "$23,790",
     type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+    engine: "Turbocharged 1.6 liter 4-Cylinder",
+    gasMileage: "29/38/32",
+    description: "With its driver-oriented cockpit, advanced technology, and turbocharged engine options, the K5 will completely transform your driving experience"
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+  k3: {
+    name: "Stinger GT2",
+    price: "$51,490",
+    type: "Sportback",
+    engine: "Twin Turbocharged 3.3 liter V6",
+    gasMileage: "17/24/20",
+    description: "Stand out in the perfect balance of power and refinement. With new standard equipment like a 300 horsepower 2.5L turbocharged engine, a 10.25-inch touch screen console, updated exterior design, and new Stinger Scorpion special edition the Stinger delivers high performance and supreme comfort on the open road."
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
+  k4: {
+    name: "EV6",
+    price: "$40,900",
+    type: "Hatchback",
+    engine: "Permanent Magnet AC Synchronous",
+    gasMileage: "310 miles of EPA",
+    description: "The all-electric EV6 is designed to inspire with a driver-centric cockpit, Dual Panoramic Screens, an available Augmented Reality Head-up Display, the spaciousness of a 5-passenger crossover, and up to 310 miles of EPA estimated all-electric range on a single charge."
+  },
+  k5: {
+    name: "Telluride",
+    price: "$42,990",
     type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
-  },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+    engine: "3.8-liter Lambda V6",
+    gasMileage: "19/24/21",
+    description: "The Telluride gives you power for wherever the road takes you. This award-wining vehicle offers impressive handling and power, advance technology, and a spacious interior designed for comfort."
   }
 }
 
-export default lexCars;
+export default kiCars;
