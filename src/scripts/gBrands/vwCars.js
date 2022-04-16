@@ -8,7 +8,7 @@ const vwCars = {
     description: "The new Golf GTI packs more punch and sophistication than ever before. Delivering a huge leap forward in performance and technology, and pushing a more concentrated, sportier look— its zip can barely be contained"
   },
   vw2: {
-    name: "Golf R⁠",
+    name: "Golf R",
     price: "$44,090",
     type: "Hatchback",
     engine: "Golf R 2.0L Turbo 7-speed DSG® automatic transmission with Tiptronic® and Sport mode",
@@ -21,7 +21,7 @@ const vwCars = {
     type: "Sedan",
     engine: "Autobahn 2.0L Turbo 7-speed DSG",
     gasMileage: "N/A",
-    description: "If you want a car that’s a blast to drive and looks razor sharp, then it’s time you meet the Jetta GLI. It unites aggressive performance with distinctive style, and a rarely equaled feel for the road."
+    description: "If you want a car that\’s a blast to drive and looks razor sharp, then it’s time you meet the Jetta GLI. It unites aggressive performance with distinctive style, and a rarely equaled feel for the road."
   },
   vw4: {
     name: "Tiguan",
