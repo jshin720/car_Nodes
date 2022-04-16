@@ -1,45 +1,45 @@
-const acCars = {
-  ilx: {
-    name: "ILX",
-    price: "$27,300",
+const audCars = {
+  a1: {
+    name: "Rs3",
+    price: "$60,000",
     type: "Sedan",
-    engine: "Aluminum-Alloy 4-Cylinder 2.4L",
-    gasMileage: "24 / 33 / 27",
-    description: "Light on its feet, the ILX meets your every impulse. With its energetic 201-HP82 i-VTEC® engine mated to a quick shifting 8-speed Dual Clutch Transmission (DCT), you\’re up for an invigorating driving experience that leaves the conventional at the curb."
+    engine: "2.5-liter, 5-cylinder turbocharged engine ",
+    gasMileage: "19 / 28",
+    description: "Delivering impressive, raw power and intelligent, responsive performance, the all-new 2022 Audi RS 3 inspires and exhilarates—offering unparalleled excitement every time you drive it."
   },
-  tlx: {
-    name: "TLX",
-    price: "$38,500",
-    type: "Sedan",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder or Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "21 / 29 / 24 or 19 / 24 / 21",
-    description: "The 2022 TLX pushes the limits of performance, tech, and design. The TLX is ready with an exhilarating 272-HP108 VTEC® Turbo engine that befits the premium amenities and alluring, sculpted body. Step up to Type S levels of performance and experience the most powerful Acura sedan ever built. A 355-HP126 3.0L Turbo V6, rear-biased Super Handling All-Wheel Drive™ (SH-AWD®), and a bespoke Sport+ mode deliver pleasure and power like never before."
+  a2: {
+    name: "Rs5 SportBack",
+    price: "$76,200",
+    type: "Hatch Back",
+    engine: "2.9-liter six-cylinder",
+    gasMileage: "18 / 25 / 21 ",
+    description: "The Audi RS 5 Sportback delivers performance and everyday usability offering an exhilarating drive."
   },
-  rdx: {
-    name: "RDX",
-    price: "$40,100",
-    type: "SUV",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder",
-    gasMileage: "22 / 28 / 24(2WD) or 21 / 27 / 23(AWD)",
-    description: "Feel your adrenaline flow with a hard-hitting 272-HP86 VTEC® Turbo engine and available Super Handling All-Wheel Drive™ that takes on corners with confidence. Available Adaptive Dampers and four IDS drive modes give you precision control over your ride."
+  a3: {
+    name: "E-tron Sportback",
+    price: "$69,100",
+    type: "Electric SUV",
+    engine: "Twin electric motor",
+    gasMileage: "218",
+    description: "Combining the functionality of a spacious SUV with the elegance of a four- door coupe, the e- tron® Sportback makes every drive electrifying."
   },
-  mdx: {
-    name: "MDX",
-    price: "$48,000",
-    type: "SUV",
-    engine: "Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "17 / 21 / 19",
-    description: "The redesigned 2022 MDX houses a 290-HP81 V-6 engine paired to a double-wishbone front suspension for precision cornering. For even more exhilaration, the MDX Type S features an available 355-hp Turbo V6 engine and available air suspension that thrills with every drive. Handling is further enhanced by the Integrated Dynamics System, including a new Lift mode for Type S, while available wider 21-in alloy wheels ensure adrenaline-inducing performance."
+  a4: {
+    name: "TT RS",
+    price: "$73,200 ",
+    type: "Coupe",
+    engine: "2.5-liter five- cylinder",
+    gasMileage: "20 / 29 / 23",
+    description: "With a dynamic look, the 2022 TT RS features a 2.5-liter engine and delivers a distinctive 5-cylinder sound, which harkens back to the original turbocharged 5-cylinder of the Ur-quattro."
   },
-  nsx: {
-    name: "NSX",
-    price: "$169,500",
+  a5: {
+    name: "R8",
+    price: "$148,700",
     type: "Super Car",
-    engine: "3.5 L V6",
-    gasMileage: "21 city / 22 highway",
-    description: "Hand-built by master technicians at the Performance Manufacturing Center (PMC) with a limited production of 350 units globally, the new NSX embodies the pinnacle of dynamic driving worthy of the Type S badge. While continuing to honor its lineage with meticulous engineering and striking design, the NSX Type S pushes the boundaries of possibility with more power and more sound for a more adrenaline-fueled drive."
+    engine: "5.2-liter V10",
+    gasMileage: "14 city / 23 highway",
+    description: "The Audi R8 performance Coupe brings the racing- inspired performance you seek with uncompromised styling.This is your opportunity to enjoy the exhilarating performance that lies within."
   }
 
 }
 
-export default acCars;
+export default audCars;

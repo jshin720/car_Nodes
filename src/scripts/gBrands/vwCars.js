@@ -1,45 +1,45 @@
-const acCars = {
-  ilx: {
-    name: "ILX",
-    price: "$27,300",
-    type: "Sedan",
-    engine: "Aluminum-Alloy 4-Cylinder 2.4L",
-    gasMileage: "24 / 33 / 27",
-    description: "Light on its feet, the ILX meets your every impulse. With its energetic 201-HP82 i-VTEC® engine mated to a quick shifting 8-speed Dual Clutch Transmission (DCT), you\’re up for an invigorating driving experience that leaves the conventional at the curb."
+const vwCars = {
+  vw1: {
+    name: "Golf GTI",
+    price: "$29,880",
+    type: "Hatchback",
+    engine: "S 2.0L Turbo 7-speed DSG® automatic transmission with Tiptronic® and Sport mode",
+    gasMileage: "N/A",
+    description: "The new Golf GTI packs more punch and sophistication than ever before. Delivering a huge leap forward in performance and technology, and pushing a more concentrated, sportier look— its zip can barely be contained"
   },
-  tlx: {
-    name: "TLX",
-    price: "$38,500",
-    type: "Sedan",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder or Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "21 / 29 / 24 or 19 / 24 / 21",
+  vw2: {
+    name: "Golf R⁠",
+    price: "$44,090",
+    type: "Hatchback",
+    engine: "Golf R 2.0L Turbo 7-speed DSG® automatic transmission with Tiptronic® and Sport mode",
+    gasMileage: "N/A",
     description: "The 2022 TLX pushes the limits of performance, tech, and design. The TLX is ready with an exhilarating 272-HP108 VTEC® Turbo engine that befits the premium amenities and alluring, sculpted body. Step up to Type S levels of performance and experience the most powerful Acura sedan ever built. A 355-HP126 3.0L Turbo V6, rear-biased Super Handling All-Wheel Drive™ (SH-AWD®), and a bespoke Sport+ mode deliver pleasure and power like never before."
   },
-  rdx: {
-    name: "RDX",
-    price: "$40,100",
-    type: "SUV",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder",
-    gasMileage: "22 / 28 / 24(2WD) or 21 / 27 / 23(AWD)",
-    description: "Feel your adrenaline flow with a hard-hitting 272-HP86 VTEC® Turbo engine and available Super Handling All-Wheel Drive™ that takes on corners with confidence. Available Adaptive Dampers and four IDS drive modes give you precision control over your ride."
+  vw3: {
+    name: "Jetta GLI",
+    price: "$31,295",
+    type: "Sedan",
+    engine: "Autobahn 2.0L Turbo 7-speed DSG",
+    gasMileage: "N/A",
+    description: "If you want a car that’s a blast to drive and looks razor sharp, then it’s time you meet the Jetta GLI. It unites aggressive performance with distinctive style, and a rarely equaled feel for the road."
   },
-  mdx: {
-    name: "MDX",
-    price: "$48,000",
+  vw4: {
+    name: "Tiguan",
+    price: "$26,490",
     type: "SUV",
-    engine: "Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "17 / 21 / 19",
-    description: "The redesigned 2022 MDX houses a 290-HP81 V-6 engine paired to a double-wishbone front suspension for precision cornering. For even more exhilaration, the MDX Type S features an available 355-hp Turbo V6 engine and available air suspension that thrills with every drive. Handling is further enhanced by the Integrated Dynamics System, including a new Lift mode for Type S, while available wider 21-in alloy wheels ensure adrenaline-inducing performance."
+    engine: "SE R-Line Black with 4MOTION® 2.0L Turbo 8-speed automatic",
+    gasMileage: "N/A",
+    description: "A stylish, versatile compact SUV that can fit your friends. And with extra cargo room when you fold the rear seats down in the 5-seater, you can easily pack whatever you need."
   },
-  nsx: {
-    name: "NSX",
-    price: "$169,500",
-    type: "Super Car",
-    engine: "3.5 L V6",
-    gasMileage: "21 city / 22 highway",
-    description: "Hand-built by master technicians at the Performance Manufacturing Center (PMC) with a limited production of 350 units globally, the new NSX embodies the pinnacle of dynamic driving worthy of the Type S badge. While continuing to honor its lineage with meticulous engineering and striking design, the NSX Type S pushes the boundaries of possibility with more power and more sound for a more adrenaline-fueled drive."
+  vw5: {
+    name: "ID.4",
+    price: "$41,230",
+    type: "Electric",
+    engine: "Pro S 1-speed automatic",
+    gasMileage: "N/A",
+    description: "The ID.4 was voted one of 2021 Wards 10 Best User Experiences, earning the award by perfectly capturing its mission, creating a cabin design aesthetic for the ID.4 BEV that can only be perceived as boldly futuristic, space-age, and offering a sense of serenity for drivers and passengers"
   }
 
 }
 
-export default acCars;
+export default vwCars;

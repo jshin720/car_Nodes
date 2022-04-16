@@ -1,43 +1,43 @@
-const acCars = {
-  ilx: {
-    name: "ILX",
-    price: "$27,300",
-    type: "Sedan",
-    engine: "Aluminum-Alloy 4-Cylinder 2.4L",
-    gasMileage: "24 / 33 / 27",
-    description: "Light on its feet, the ILX meets your every impulse. With its energetic 201-HP82 i-VTEC® engine mated to a quick shifting 8-speed Dual Clutch Transmission (DCT), you\’re up for an invigorating driving experience that leaves the conventional at the curb."
+const mbCars = {
+  mb1: {
+    name: "AMG C 43 Coupe",
+    price: "$60,500",
+    type: "Coupe",
+    engine: "AMG-enhanced 3.0L V6 biturbo engine",
+    gasMileage: "19 / 28",
+    description: "Its 385-hp biturbo V6, quick-shifting 9-speed, performance all-wheel drive and adaptive suspension are all deeply infused with AMG DNA. Bold style, advanced technology and a rich cockpit put it all in your hands."
   },
-  tlx: {
-    name: "TLX",
-    price: "$38,500",
-    type: "Sedan",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder or Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "21 / 29 / 24 or 19 / 24 / 21",
-    description: "The 2022 TLX pushes the limits of performance, tech, and design. The TLX is ready with an exhilarating 272-HP108 VTEC® Turbo engine that befits the premium amenities and alluring, sculpted body. Step up to Type S levels of performance and experience the most powerful Acura sedan ever built. A 355-HP126 3.0L Turbo V6, rear-biased Super Handling All-Wheel Drive™ (SH-AWD®), and a bespoke Sport+ mode deliver pleasure and power like never before."
+  mb2: {
+    name: "AMG GLE 53 Coupe",
+    price: "$78,450",
+    type: "Crossover",
+    engine: "3.0L inline-6 turbo with mild hybrid drive",
+    gasMileage: "17 / 21 ",
+    description: "The AMG GLE 53 Coupe rushes ahead with triple-boosted torque, one of them electric, a digital cockpit with class-leading technology, and a powerful fusion of SUV capability and AMG coupe character."
   },
-  rdx: {
-    name: "RDX",
-    price: "$40,100",
+  mb3: {
+    name: "AMG G 63 SUV",
+    price: "$156,450",
     type: "SUV",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder",
-    gasMileage: "22 / 28 / 24(2WD) or 21 / 27 / 23(AWD)",
-    description: "Feel your adrenaline flow with a hard-hitting 272-HP86 VTEC® Turbo engine and available Super Handling All-Wheel Drive™ that takes on corners with confidence. Available Adaptive Dampers and four IDS drive modes give you precision control over your ride."
+    engine: "AMG 4.0L V8 biturbo",
+    gasMileage: "13 / 16 ",
+    description: "With 577 handcrafted horses, the AMG G 63 is a legend raised to a higher power for a new era. Advanced luxury, unwavering confidence, and extensive individualization let you create a G that's at ease in any corner of the world"
   },
-  mdx: {
-    name: "MDX",
-    price: "$48,000",
-    type: "SUV",
-    engine: "Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "17 / 21 / 19",
-    description: "The redesigned 2022 MDX houses a 290-HP81 V-6 engine paired to a double-wishbone front suspension for precision cornering. For even more exhilaration, the MDX Type S features an available 355-hp Turbo V6 engine and available air suspension that thrills with every drive. Handling is further enhanced by the Integrated Dynamics System, including a new Lift mode for Type S, while available wider 21-in alloy wheels ensure adrenaline-inducing performance."
+  mb4: {
+    name: "EQS 580 4MATIC",
+    price: "$125,900",
+    type: "Electric Sedan",
+    engine: "Permanently Excited Synchronous(PSM) ",
+    gasMileage: "N/A",
+    description: "The EQS brings the EV to the power of Mercedes. Innovative all-electric, all-wheel drive and an all-engaging cockpit. Breathtakingly swift performance and sumptuous luxury. And leadership that aims to redefine the luxury sedan for a generations to come."
   },
-  nsx: {
-    name: "NSX",
-    price: "$169,500",
+  mb5: {
+    name: "AMG GT Coupe",
+    price: "$325,000",
     type: "Super Car",
-    engine: "3.5 L V6",
-    gasMileage: "21 city / 22 highway",
-    description: "Hand-built by master technicians at the Performance Manufacturing Center (PMC) with a limited production of 350 units globally, the new NSX embodies the pinnacle of dynamic driving worthy of the Type S badge. While continuing to honor its lineage with meticulous engineering and striking design, the NSX Type S pushes the boundaries of possibility with more power and more sound for a more adrenaline-fueled drive."
+    engine: "4.0L AMG V8 biturbo",
+    gasMileage: "15 city / 20 highway",
+    description: "An AMG Black Series only rarely escapes to the street. The 720-hp AMG GT is the sixth example of this superlative driver's car, created from bespoke performance enhancements drawn directly from motorsports."
   }
 
 }

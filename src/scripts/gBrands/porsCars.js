@@ -1,45 +1,53 @@
-const acCars = {
-  ilx: {
-    name: "ILX",
-    price: "$27,300",
-    type: "Sedan",
-    engine: "Aluminum-Alloy 4-Cylinder 2.4L",
-    gasMileage: "24 / 33 / 27",
-    description: "Light on its feet, the ILX meets your every impulse. With its energetic 201-HP82 i-VTEC® engine mated to a quick shifting 8-speed Dual Clutch Transmission (DCT), you\’re up for an invigorating driving experience that leaves the conventional at the curb."
-  },
-  tlx: {
-    name: "TLX",
-    price: "$38,500",
-    type: "Sedan",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder or Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "21 / 29 / 24 or 19 / 24 / 21",
-    description: "The 2022 TLX pushes the limits of performance, tech, and design. The TLX is ready with an exhilarating 272-HP108 VTEC® Turbo engine that befits the premium amenities and alluring, sculpted body. Step up to Type S levels of performance and experience the most powerful Acura sedan ever built. A 355-HP126 3.0L Turbo V6, rear-biased Super Handling All-Wheel Drive™ (SH-AWD®), and a bespoke Sport+ mode deliver pleasure and power like never before."
-  },
-  rdx: {
-    name: "RDX",
-    price: "$40,100",
-    type: "SUV",
-    engine: "Turbo Aluminum-Alloy 4-Cylinder",
-    gasMileage: "22 / 28 / 24(2WD) or 21 / 27 / 23(AWD)",
-    description: "Feel your adrenaline flow with a hard-hitting 272-HP86 VTEC® Turbo engine and available Super Handling All-Wheel Drive™ that takes on corners with confidence. Available Adaptive Dampers and four IDS drive modes give you precision control over your ride."
-  },
-  mdx: {
-    name: "MDX",
-    price: "$48,000",
-    type: "SUV",
-    engine: "Turbo Aluminum-Alloy 6-Cylinder",
-    gasMileage: "17 / 21 / 19",
-    description: "The redesigned 2022 MDX houses a 290-HP81 V-6 engine paired to a double-wishbone front suspension for precision cornering. For even more exhilaration, the MDX Type S features an available 355-hp Turbo V6 engine and available air suspension that thrills with every drive. Handling is further enhanced by the Integrated Dynamics System, including a new Lift mode for Type S, while available wider 21-in alloy wheels ensure adrenaline-inducing performance."
-  },
-  nsx: {
-    name: "NSX",
-    price: "$169,500",
+const porCars = {
+  p1: {
+    name: "718 Cayman GT4",
+    price: "$101,200",
     type: "Super Car",
-    engine: "3.5 L V6",
-    gasMileage: "21 city / 22 highway",
-    description: "Hand-built by master technicians at the Performance Manufacturing Center (PMC) with a limited production of 350 units globally, the new NSX embodies the pinnacle of dynamic driving worthy of the Type S badge. While continuing to honor its lineage with meticulous engineering and striking design, the NSX Type S pushes the boundaries of possibility with more power and more sound for a more adrenaline-fueled drive."
+    engine: "Naturally aspirated boxer 6",
+    gasMileage: "N/A",
+    description: "The 718 Cayman GT4 is the perfect sport car for those who like to push the limits. For those who would rather ask \"why not?\" than \"why ?\". For those who take fun seriously and who would rather sit in a sport seat than a leather arm chair."
+  },
+  p2: {
+    name: "911 GT3",
+    price: " $161,100",
+    type: "Super Car",
+    engine: "Naturally aspirated boxer 6",
+    gasMileage: "N/A",
+    description: "The 911 GT3 with Touring Package also sets the performance tone – but with focus primarily on the road. Thanks to ingenious aerodynamics, cornering remains impressive, even without a large rear wing."
+  },
+  p3: {
+    name: "Taycan GTS",
+    price: "$131,400",
+    type: "Electric",
+    engine: "AC Permanent Synchronous Motors(440 kW/ 590 hp) ",
+    gasMileage: "N/A",
+    description: "The new Taycan GTS and Taycan GTS Sport Turismo charge the Porsche electric driving experience with even more intense emotion."
+  },
+  p4: {
+    name: "Panamera GTS",
+    price: "$130,700",
+    type: "Cross Over",
+    engine: "Twin-turbocharged V8",
+    gasMileage: "N/A",
+    description: "We asked ourselves one question early on: should a sporty sedan really look like a sedan? The new Panamera answers this question once more with an unequivocal no. Three times."
+  },
+  p5: {
+    name: "Macan GTS",
+    price: "$79,900",
+    type: "SUV",
+    engine: "Twin-turbocharged V6",
+    gasMileage: "N/A",
+    description: "Stand out where others fade into the masses: the new Macan T.Young, dynamic and urban, with extensive standard equipment, model- specific design features - and, of course, typical Porsche performance."
+  },
+  p6: {
+    name: "Cayenne GTS",
+    price: "$109,000",
+    type: "SUV",
+    engine: "Twin-turbocharged V8",
+    gasMileage: "N/A",
+    description: "Another place on the Cayenne model range starting grid has now been taken – with intense performance and precise dynamics. The Cayenne Turbo GT has all the attributes to be ahead of the game from the start."
   }
 
 }
 
-export default acCars;
+export default porCars;
