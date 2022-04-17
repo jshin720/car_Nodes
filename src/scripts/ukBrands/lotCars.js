@@ -1,52 +1,28 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
-    type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+const lotCars = {
+  lo1: {
+    name: "Eletre",
+    price: "$120,000 est",
+    type: "Electric",
+    engine: "N/A",
+    gasMileage: "370 miles range ",
+    description: "A true Lotus experience. Optimal structural rigidity and active dynamics, combined with a perfect blend of high power and torque, provide the kind of performance that is expected from a Lotus. With powerful electric motors and a low centre of gravity, this new icon makes ordinary driving, extra."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
-  },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
-    type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
-  },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
+  lo2: {
+    name: "Emira V6 Supercharged",
+    price: "$85,900",
     type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+    engine: "3.5-litre V6",
+    gasMileage: "22 / 31 / 25",
+    description: "Everything about Emira is for the drivers, including the engine. Emira will offer two powertrains built to deliver blistering performance and maximum thrills. This includes the much-loved and characterful 3.5-litre supercharged V6 and the world\’s most powerful production 4 cylinder engine developed in conjunction with AMG and tuned to deliver a heart-racing 360hp."
+  },
+  lo3: {
+    name: "Evija",
+    price: "$2 million",
+    type: "Electric Super Car",
+    engine: "2.4L Turbo in-line 4-cylinder engine",
+    gasMileage: "N/A",
+    description: "The thrilling next chapter of one of the greatest automotive stories ever told. The Lotus Evija continues a rich, 70-year tradition of iconic, game-changing road and racing cars."
   }
 }
 
-export default lexCars;
+export default lotCars;

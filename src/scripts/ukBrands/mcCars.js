@@ -1,52 +1,36 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
-    type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+const mcCars = {
+  mc1: {
+    name: "765LT",
+    price: "$382,500",
+    type: "Super car",
+    engine: "4.0-liter V8 engine",
+    gasMileage: "14 city / 18 highway",
+    description: " The new McLaren 765LT has a legend to live up to: Longtail. Every car that\’s carried this name has been unique. Extreme and utterly focused around the driver. All about maximum engagement. Searing performance. Sensational handling."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+  mc2: {
+    name: "720S",
+    price: "$299,000",
+    type: "Super car",
+    engine: "4.0-liter V8 engine",
+    gasMileage: "15 city / 22 highway",
+    description: "The McLaren 720S is purposeful and radical. With apex predator responses. It accelerates from 0-60mph in an incredible 2.8 seconds when provoked. And can cover a quarter of a mile in 10.4 seconds. From a standing start."
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
-    type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
+  mc3: {
+    name: "Artura",
+    price: "$225,000",
+    type: "Super car",
+    engine: "hybrid twin-turbo V-6 ",
+    gasMileage: "N/A",
+    description: "With Artura, we started with a clean sheet.The McLaren Carbon Fibre Lightweight Architecture(MCLA) at its core is all- new.As is the High- Performance Hybrid powertrain.And so much more."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+  mc4: {
+    name: "GT",
+    price: "$200,000",
+    type: "Super car",
+    engine: "4.0-liter V8 engine",
+    gasMileage: "15 city / 22 highway",
+    description: "The new superlight GT reimagines the breed. And the results are extraordinary. Strikingly beautiful. Engineered for continent-crossing capability. With an engaging yet comfortable ride. And generous luggage space"
   }
 }
 
-export default lexCars;
+export default mcCars;

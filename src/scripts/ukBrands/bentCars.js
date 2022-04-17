@@ -1,52 +1,28 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
+const bentCars = {
+  bent1: {
+    name: "CONTINENTAL GT V8",
+    price: "$222,700",
     type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+    engine: "4.0 litre V8 Petrol twin turbocharged engine producing 550 PS & 770 Nm of torque",
+    gasMileage: "16 / 26 / 19 ",
+    description: "With a lively V8 engine delivering irresistibly dynamic performance, accompanied by the sound of its uniquely emotive burble, the Bentley Continental GT V8 offers a truly engaging driving experience. Combine this with elegant design, contemporary craftsmanship and seamless technology, and you have a grand tourer that makes every journey breathtaking. "
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
+  bent2: {
+    name: "FLYING SPUR MULLINER",
+    price: "$602,200",
     type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+    engine: "4.0-litre, twin-turbocharged V8 engine",
+    gasMileage: "16 / 26 / 19",
+    description: "The Flying Spur Mulliner represents the pinnacle of Bentley luxury. In pushing automotive craftsmanship to exquisite new limits, Mulliner has set a new standard for comfort and style on the road. Whether you prefer to drive your car yourself or be driven by a chauffeur, the Flying Spur Mulliner can be considered the ultimate luxury sedan."
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
-    type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
-  },
-  rx: {
-    name: "Rx350",
+  bent4: {
+    name: "BENTAYGA S",
     price: "$52,175 (AWD)",
     type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+    engine: "4.0 V8 twin-turbocharged engine",
+    gasMileage: "15 / 24 / 18",
+    description: "This is the new Bentley Bentayga S: a dynamic and visually striking expression of Bentayga. The more time you spend in the presence of this unique vehicle, the harder it becomes to describe. Because it performs with the power of a sports car and, when driven in Enhanced Sports Mode, an agility that appears to defy physics."
   }
 }
 
-export default lexCars;
+export default bentCars;

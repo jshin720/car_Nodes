@@ -1,52 +1,44 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
+const jagCars = {
+  jag1: {
+    name: "XF",
+    price: "$45,300",
     type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+    engine: "2.0 L 4-cylinder",
+    gasMileage: "22 / 30 / 25 ",
+    description: "Jaguar XF R-Dynamic is defined by its powerful sport suspension, and enhanced by exterior touches, such as wheels - 19\", 5 split - spoke, Gloss Silver and a Shadow Atlas grille.The individuality continues inside, with Sports seats to settle into as you experience a thrilling drive."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+  jag2: {
+    name: "I-PACE",
+    price: "$71,300",
+    type: "Electric",
+    engine: "394 HP (EV400), 90kWh Battery, AWD",
+    gasMileage: "N/A",
+    description: "I-PACE reimagines the classic Jaguar balance of sports car focus and luxury craftsmanship, creating a spacious cabin with beautifully integrated technology."
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
+  jag3: {
+    name: "E-PACE",
+    price: "$48,000",
     type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
+    engine: "2.0L P250 i4 GAS",
+    gasMileage: "N/A",
     description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
+  jag4: {
+    name: "F-PACE SVR",
+    price: "$86,600",
     type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
+    engine: "5.0L P550 i8 GAS",
+    gasMileage: "15 / 21 / 17",
+    description: "Designed for an enhanced performance, the F-PACE SVR is the powerful and practical luxury SUV. A roaring 550 hp V8 engine is paired with quad tailpipes with active exhaust, for an inimitable driving experience. Featuring an SVR body kit with exclusive Satin Grey finishes, and the option of a suedecloth or Windsor leather interior with Performance seating, the style matches up to the substance."
   },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
+  jag5: {
+    name: "F-TYPE",
+    price: "$73,400",
     type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+    engine: "P450 RWD AUTOMATIC",
+    gasMileage: "17 / 24 / 19",
+    description: "The F-TYPE is Jaguar design in its most athletic form — lean, and elegant from any angle."
   }
 }
 
-export default lexCars;
+export default jagCars;

@@ -1,52 +1,44 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
+const amCars = {
+  am1: {
+    name: "V12 Vantage",
+    price: "$300,000",
     type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+    engine: "All-alloy quad overhead cam, 48 valve, 5.2l bi-turbo, V12 with stop/start cylinder de-activation",
+    gasMileage: "12 city / 18 highway",
+    description: "For nearly two decades, V12 Vantage has boldly represented Aston Martin\’s passion for performance. Now this iconic bloodline gives rise to the fastest, fiercest of them all. Radically re-engineered to create an exceptionally potent driver\’s car, the final chapter for V12 Vantage is the truest example of intoxicating performance."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
+  am2: {
+    name: "DB11",
+    price: "$208,425",
     type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+    engine: "All alloy quad overhead cam, 4.0 litre twin-turbo V8",
+    gasMileage: "18 city /24 highway",
+    description: "Standard-bearer for an all-new generation of cars, DB11 is the most powerful and efficient DB production model in Aston Martin\’s history. "
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
+  am3: {
+    name: "DBS",
+    price: "$316,300",
     type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
+    engine: "All-alloy quad overhead cam, 48 valve, 5.2 litre bi-turbo, V12 with stop/start cylinder de-activation",
+    gasMileage: "14 city / 22 highway",
+    description: "For over half a century, the name DBS has meant just one thing: the ultimate production Aston Martin."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
+  am4: {
+    name: "DBX707",
+    price: "$235,086",
     type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
+    engine: "All alloy quad overhead cam, 4.0 litre twin-turbo V8",
+    gasMileage: "14/20/16 mpg (est)",
+    description: "The new Aston Martin DBX707 the world's most powerful, luxury SUV. A new ruler of adventure with 707PS. Born with a sports car soul, its immense power and peerless handling make every drive a voyage of intensity. A magnetic force with a commanding presence. DBX707 is a new seat of power."
   },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
+  am5: {
+    name: "Aston Martin Valkyrie",
+    price: "$3,000,000 est",
     type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+    engine: "6.5-liter V-12 and an electric motor",
+    gasMileage: "N/A",
+    description: "An incredibly special car with an equally remarkable name. One that immediately evokes connotations of power and honor, of being chosen by the Gods. Only 150 road cars will be made.Valkyrie is Aston Martin\’s first ever hypercar and it leaves nothing in reserve."
   }
 }
 
-export default lexCars;
+export default amCars;
