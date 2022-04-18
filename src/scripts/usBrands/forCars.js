@@ -1,52 +1,44 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
-    type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
-  },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
-  },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
+const forCars = {
+  for1: {
+    name: "Explorer ST",
+    price: "$48,245",
     type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
+    engine: "3.0L EcoBoost® V6",
+    gasMileage: "18/25 EPA-Est. MPG City/Hwy",
+    description: "Among Ford's vast lineup of trucks and SUVs, the 2022 Explorer is the one that's best suited for family duty. With three rows of seats and generous cargo space, the Explorer is versatile for buyers toting kids and all of their associated gear."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
+  for2: {
+    name: "Mustang Mach 1",
+    price: "$56,000",
     type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
+    engine: "5.0L Ti-VCT V8 Engine",
+    gasMileage: "15/23 EPA-Est. MPG City/Hwy",
+    description: "The Ford Mustang Mach 1 didn't happen overnight. It's the culmination of years of development to the sixth-gen Stang bundled into a single package."
   },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+  for3: {
+    name: "Ford Bronco™ SUV",
+    price: "$30,800",
+    type: "SUV",
+    engine: "3.0L Ti-VCT GTDI V-6",
+    gasMileage: "N/A",
+    description: "The 2022 Ford Bronco rocks a nostalgia-inducing design along with both civil on-road driving manners and big-time trail-tackling ability."
+  },
+  for4: {
+    name: "Ford Mustang Mach-E",
+    price: "$43,895)",
+    type: "Electric SUV",
+    engine: "70.0-kWh battery",
+    gasMileage: "314 Miles",
+    description: "The 2022 Ford Mustang Mach-E blends popular elements of the past and present in a highly desirable package that bodes well for the future of electric vehicles"
+  },
+  for5: {
+    name: "Ford F-150 Raptor",
+    price: "$64,145",
+    type: "Truck",
+    engine: "3.5L PowerBoost™ Full Hybrid V6",
+    gasMileage: "25/26 EPA-Est. MPG City/Hwy",
+    description: "Think of the 2022 Ford F-150 Raptor as a pickup truck on steroids. Compared with the regular F-150, its body is bulkier, its powertrain is stouter, and its chassis is enhanced to endure more punishment in muddy, rocky, and sandy environments."
   }
 }
 
-export default lexCars;
+export default forCars;

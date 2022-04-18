@@ -1,52 +1,44 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
-    type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+const chevCars = {
+ chev1: {
+    name: "BOLT EUV",
+    price: "$33,500",
+    type: "Electric",
+    engine: "200 hp (150 kW) of motoring power",
+    gasMileage: "EPA-est. 247 mi",
+    description: "Charging your vehicle is as simple as plugging in your smartphone. Whether it\’s charging your vehicle or utilizing a network of over 40,000 public stations, Chevrolet provides the tools to ensure a convenient experience."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
-  },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
-    type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
-  },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
+  chev2: {
+    name: "CAMARO",
+    price: "$25,000",
     type: "Coupe",
-    engine: "V8 5.0L",
+    engine: "6.2L Supercharged V8 DI engine",
     gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
+    description: "An iconic American automobile, Camaro continues to push the limits of performance and style. With aerodynamic looks and a refined, driver-centric interior, it’s built to seamlessly integrate form, high-powered function and flair.  "
   },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+  chev3: {
+    name: "CORVETTE",
+    price: "$81,090",
+    type: "Sports Car",
+    engine: "6.2L V8 DI engine",
+    gasMileage: "16 / 24 / 19",
+    description: "The 6.2L LT2 V8 makes this mid-engine masterpiece the most powerful Stingray Sports Car produced, ever."
+  },
+  chev4: {
+    name: "TAHOE",
+    price: "$70,875(AWD)",
+    type: "SUV",
+    engine: "5.3L V8 engine",
+    gasMileage: "14/20 MPG city/hwy",
+    description: "Impossible to ignore."
+  },
+  chev5: {
+    name: "BLAZER",
+    price: "$33,400",
+    type: "SUV",
+    engine: "3.6L V6 engine",
+    gasMileage: "19/27 MPG city/hwy",
+    description: "Always camera-ready."
   }
 }
 
-export default lexCars;
+export default chevCars;

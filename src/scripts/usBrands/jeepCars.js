@@ -1,52 +1,36 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
-    type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+const jeepCars = {
+  je1: {
+    name: "New Grand Cherokee",
+    price: "$38,720",
+    type: "SUV",
+    engine: "3.6-liter V6 engine",
+    gasMileage: "19 / 26 / 22 ",
+    description: "The new 2022 Jeep® Grand Cherokee answers the demands of the everyday and every new adventure"
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+  je2: {
+    name: "Renegade",
+    price: "$24,195",
+    type: "SUV",
+    engine: "1.3-liter i4 engine",
+    gasMileage: "24 / 32 / 27",
+    description: "We\’re always looking to help improve your driving experience, both inside and out. Here are some features available on the 2022 Jeep Renegade."
   },
-  nx: {
+  je3: {
     name: "Nx350",
-    price: "$47,725",
+    price: "$29,995",
     type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
+    engine: "3.6-liter V6 engine",
+    gasMileage: "17 / 23 / 19",
+    description: "The new 2022 Wrangler offers more opportunities for adventure and the most available customization when compared to previous models. Forever in a category of its own, Wrangler gives every driver the thrill of the Most Ways To Experience Open-Air Freedom and provides the power to explore new territory."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+  je4: {
+    name: "Gladiator",
+    price: "$36,480",
+    type: "Truck",
+    engine: "3.6-liter V6 engine",
+    gasMileage: "16 / 23 / 19",
+    description: "Legendary capability, outstanding utility and intuitive technology mean the Jeep® Gladiator is ready to take on almost anything. Experience new possibilities of adventure with the Only Open-Air Pickup Truck in the Industry."
   }
 }
 
-export default lexCars;
+export default jeepCars;

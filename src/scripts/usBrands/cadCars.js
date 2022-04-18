@@ -1,51 +1,43 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
+const cadCars = {
+  cad1: {
+    name: "LYRIQ",
+    price: "$59,990",
+    type: "Electric SUV",
+    engine: "12 MODULE/1 MOTOR—REAR-WHEEL DRIVE",
+    gasMileage: " 300-plus miles",
+    description: "When you approach or leave your LYRIQ, the vehicle performs an intricately choreographed lighting display across the front and rear of the vehicle. Even on the road, LYRIQ\’s uniquely crafted headlamps shine like nothing else"
+  },
+  cad2: {
+    name: "CT4 V-SERIES",
+    price: "$58,995",
     type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+    engine: "3.6L TWIN TURBOCHARGED V6",
+    gasMileage: "15 / 23 / 18",
+    description: "When racing is in your DNA, concession is not an option. Dialed-in and detail abundant, the 2022 CT4 V-Series stops at nothing to deliver an exhilarating drive that sets the bar for both luxury and performance."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
+  cad3: {
+    name: "CT5 V-SERIES",
+    price: "$83,995",
     type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+    engine: "6.2L HAND- BUILT SUPERCHARGED V8",
+    gasMileage: "13/21/15 (CVT)AWD",
+    description: "ady to chase racing dreams? Edge out the conventional in CT5-V, with its heart-pounding performance on command, intuitive tech and sophisticated driver comforts. Or take to the track in the most powerful Cadillac ever—the ultra-high performance CT5-V Blackwing™, which delivers unmitigated power, aerodynamic advantages and track-themed touches throughout a polished interior."
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
+  cad4: {
+    name: "XT5",
+    price: "$57,090",
     type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
+    engine: "3.6L V6 engine",
+    gasMileage: "18 / 26 / 21",
+    description: "Buckle up and drive with confidence. A whole suite of leading-edge safety and driver assistance features come standard in your XT5: Front Pedestrian Braking, Automatic Emergency Braking, Forward Collision Alert, Safety Alert Seat, Rear Seat Reminder,† HD Rear Vision Camera, Teen Driver, Vehicle Diagnostics† and Rear Park Assist (Feature will not function on certain models without dealer retrofit, see dealer for details.)."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
+  cad5: {
+    name: "Escalade",
+    price: "$104,290",
     type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+    engine: "6.2L V8 engine",
+    gasMileage: "14 / 19 / 16",
+    description: "We made incredible predictions come true.The 2022 Escalade raises its own high- tech standards, pushing the journey forward with innovations that don\’t just enhance your driving experience—they revolutionize it."
   }
 }
 

@@ -1,52 +1,36 @@
-const lexCars = {
-  is: {
-    name: "Is500",
-    price: "$57,575",
-    type: "Sedan",
-    engine: "5.0-liter V8 engine",
-    gasMileage: "17 / 25 / 20 ",
-    description: "Destined to get the world\’s attention, the 2022 IS 500 F SPORT Performance marks the debut of the Lexus F SPORT Performance line. In addition to a larger, naturally aspirated 5.0-liter V8 engine, it further sets itself apart from the standard F SPORT models with even more heart-racing sound, stacked quad exhaust tips, dynamic performance instrumentation and more."
+const tesCars = {
+  tes1: {
+    name: "Model S",
+    price: "$99,990",
+    type: "Electric",
+    engine: "battery-powered liftback ",
+    gasMileage: "405 mi range",
+    description: "Model S Plaid has the quickest acceleration of any vehicle in production. Updated battery architecture for all Model S trims enables back-to-back track runs without performance degradation."
   },
-  es: {
-    name: "Es350",
-    price: "$46,525",
-    type: "Sedan",
-    engine: "3.5L V6",
-    gasMileage: "22 / 31 / 25",
-    description: "The sleek, coupe-like silhouette of the ES has been refined even further for 2022. It features a provocative new grille pattern and elegantly redesigned LED headlamps for striking illumination."
+  tes2: {
+    name: "Model 3",
+    price: "$46,990",
+    type: "Electric",
+    engine: "battery-powered liftback ",
+    gasMileage: "358 mi range",
+    description: "Model 3 comes with the option of dual motor all-wheel drive, 20” Überturbine Wheels and Performance Brakes for total control in all weather conditions."
   },
-  nx: {
-    name: "Nx350",
-    price: "$47,725",
-    type: "SUV",
-    engine: "2.4L Turbo in-line 4-cylinder engine",
-    gasMileage: "22/28/25 (CVT)AWD",
-    description: "Forging an indelible impression from every angle, the NX boasts an entirely new platform that sets the stage for all the possibilities that follow. Punctuating its longer and wider stance, striking 20-inch wheels—the largest ever on an NX—are also available."
+  tes3: {
+    name: "Model X",
+    price: "$114,990",
+    type: "Electric",
+    engine: "battery-powered liftback ",
+    gasMileage: "333 mi range",
+    description: "With the most power and quickest acceleration of any SUV, Model X Plaid is the highest performing SUV ever built."
   },
-  rx: {
-    name: "Rx350",
-    price: "$52,175 (AWD)",
-    type: "SUV",
-    engine: "3.5L V6",
-    gasMileage: "18 / 25 / 21",
-    description: "From an unmistakable floating roofline, to expressive details like available Premium Triple-Beam LED headlamps, the RX exudes refinement. While bold front and rear fascias complement its dynamic, yet elegant silhouette."
-  },
-  rc: {
-    name: "Rc-F",
-    price: "$66,945",
-    type: "Coupe",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 24 / 19",
-    description: "The RC F features a front spoiler for enhanced grip and a speed-activated rear wing for improved aerodynamics. And the Carbon Package adds carbon fiber components like a roof, front spoiler, rocker-panel splitters, rear diffuser and more."
-  },
-  lc: {
-    name: "LC",
-    price: "$94,225",
-    type: "Super Car",
-    engine: "V8 5.0L",
-    gasMileage: "16 / 25 / 19",
-    description: "For those who dare to seek the extraordinary, the LC Convertible is crafted to capture your attention while stirring your senses. Featuring a meticulously designed, lightweight soft top, it maintains the same sleek silhouette as its coupe counterpart."
+  tes4: {
+    name: "Model Y",
+    price: "$62,990",
+    type: "Electric",
+    engine: "battery-powered liftback ",
+    gasMileage: "330 mi range",
+    description: "Model Y provides maximum versatility—able to carry 7 passengers and their cargo. Each second row seat folds flat independently, creating flexible storage for skis, furniture, luggage and more. The liftgate opens to a low trunk floor that makes loading and unloading easy and quick."
   }
 }
 
-export default lexCars;
+export default tesCars;
