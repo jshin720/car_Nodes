@@ -1,4 +1,4 @@
-const bmCars = {
+const bmwCars = {
   b1: {
     name: "M3",
     price: "$70,100",
@@ -41,4 +41,4 @@ const bmCars = {
   }
 }
 
-export default bmCars;
+export default bmwCars;

@@ -1,4 +1,4 @@
-const hyCars = {
+const hyunCars = {
   hy1: {
     name: "VELOSTER N",
     price: "$32,500",
@@ -49,4 +49,4 @@ const hyCars = {
   }
 }
 
-export default hyCars;
+export default hyunCars;

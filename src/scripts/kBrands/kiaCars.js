@@ -1,4 +1,4 @@
-const kiCars = {
+const kiaCars = {
   k1: {
     name: "Niro EV",
     price: "$39,990",
@@ -41,4 +41,4 @@ const kiCars = {
   }
 }
 
-export default kiCars;
+export default kiaCars;

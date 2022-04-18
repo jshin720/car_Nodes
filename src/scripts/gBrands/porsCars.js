@@ -1,4 +1,4 @@
-const porCars = {
+const porsCars = {
   p1: {
     name: "718 Cayman GT4",
     price: "$101,200",
@@ -50,4 +50,4 @@ const porCars = {
 
 }
 
-export default porCars;
+export default porsCars;

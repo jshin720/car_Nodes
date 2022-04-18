@@ -1,4 +1,4 @@
-// import fetchCarInfo from "../src/scripts/data.js"
+import countries from "./scripts/countries"
 
 document.addEventListener('DOMContentLoaded', () => {
   const center = document.getElementsByClassName('center')[0];
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // fetchCarInfo();
   // console.log(test);
 
-  
+  console.log("countries object", countries)
 
   center.addEventListener('click', () => {
     // let countries = [USA, Korea, Japan, Italy, Germany, Uk];
