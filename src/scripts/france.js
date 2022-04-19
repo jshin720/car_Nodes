@@ -3,9 +3,12 @@ import ciCars from "./fBrands/ciCars"
 import peuCars from "./fBrands/peuCars"
 
 const france = {
-  Bugatti: buCars,
-  Citroen: ciCars,
-  Peugeot: peuCars
+  name: "France",
+  children: [
+    buCars,
+    ciCars,
+    peuCars
+  ]
 }
 
 export default france;

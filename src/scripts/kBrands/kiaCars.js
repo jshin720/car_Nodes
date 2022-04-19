@@ -1,5 +1,7 @@
 const kiaCars = {
-  k1: {
+  name: "Kia",
+  children: [
+  {
     name: "Niro EV",
     price: "$39,990",
     type: "Electric",
@@ -7,7 +9,7 @@ const kiaCars = {
     gasMileage: "239-mile EPA ",
     description: "The Niro EV offers the comfort and capability of a crossover with an all-electric experience. And with HOV lane privileges in select states and 291 pound-feet of torque, the Niro EV is a pleasure to drive."
   },
-  k2: {
+  {
     name: "K5",
     price: "$23,790",
     type: "Sedan",
@@ -15,7 +17,7 @@ const kiaCars = {
     gasMileage: "29/38/32",
     description: "With its driver-oriented cockpit, advanced technology, and turbocharged engine options, the K5 will completely transform your driving experience"
   },
-  k3: {
+  {
     name: "Stinger GT2",
     price: "$51,490",
     type: "Sportback",
@@ -23,7 +25,7 @@ const kiaCars = {
     gasMileage: "17/24/20",
     description: "Stand out in the perfect balance of power and refinement. With new standard equipment like a 300 horsepower 2.5L turbocharged engine, a 10.25-inch touch screen console, updated exterior design, and new Stinger Scorpion special edition the Stinger delivers high performance and supreme comfort on the open road."
   },
-  k4: {
+  {
     name: "EV6",
     price: "$40,900",
     type: "Hatchback",
@@ -31,7 +33,7 @@ const kiaCars = {
     gasMileage: "310 miles of EPA",
     description: "The all-electric EV6 is designed to inspire with a driver-centric cockpit, Dual Panoramic Screens, an available Augmented Reality Head-up Display, the spaciousness of a 5-passenger crossover, and up to 310 miles of EPA estimated all-electric range on a single charge."
   },
-  k5: {
+  {
     name: "Telluride",
     price: "$42,990",
     type: "SUV",
@@ -39,6 +41,7 @@ const kiaCars = {
     gasMileage: "19/24/21",
     description: "The Telluride gives you power for wherever the road takes you. This award-wining vehicle offers impressive handling and power, advance technology, and a spacious interior designed for comfort."
   }
+  ]
 }
 
 export default kiaCars;
