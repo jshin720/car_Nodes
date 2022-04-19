@@ -27,7 +27,7 @@ console.log(dataset[0].children)
   const height = 500 - margin.top - margin.bottom;
   // setting  margins for the svg so inner svg won't cut off and will be within the main svg window 
 
-  const svg = d3.select("car-tree") // calling the class name of "car-tree"
+  const svg = d3.select(".car-tree") // calling the class name of "car-tree"
     .append("svg")
     .attr("width", width + margin.right + margin.left)
     .attr('height', height + margin.top + margin.bottom)
@@ -51,7 +51,32 @@ console.log(dataset[0].children)
 
   update(root);
 
-  const update = (carsData) => {
+  // const update = (carsData) => {
+  //   let countries = treeMap(root);
+  //   // calling in the treemap function while passing in the root data, while redifining the orginal countries data
+  //   let nodes = countries.descendants();
+  //   nodes.forEach((d) => {
+  //     console.log("nodes d", d)
+  //     d.y = d.depth * 180;
+
+  //   });
+  //   let node = svg.selectAll("g.node")
+  //     .data(nodes, (d) => {
+  //       return d.id || (d.id = ++ i)
+  //     })
+
+  //   let nodeEnter = node
+  //     .enter()
+  //     .append('g')
+  //     .attr("class", "node")
+  //     .attr("transform", (d) => {
+  //       return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
+  //     })
+  //     .on('click', click)
+  //     console.log("nodes")
+  // }
+
+  function update(carsData) {
     let countries = treeMap(root);
     // calling in the treemap function while passing in the root data, while redifining the orginal countries data
     let nodes = countries.descendants();
@@ -62,19 +87,19 @@ console.log(dataset[0].children)
     });
     let node = svg.selectAll("g.node")
       .data(nodes, (d) => {
-        return d.id || (d.id = ++ i)
+        return d.id || (d.id = ++i)
       })
 
     let nodeEnter = node
       .enter()
       .append('g')
       .attr("class", "node")
-      attr("transform", (d) => {
-        return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
-      })
-      onabort('click', click)
+      .attr("transform", (d) => {
+      return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
+    })
+    .on('click', click)
+    console.log("nodes")
   }
-
 
 
 //   const center = document.getElementsByClassName('center')[0];
