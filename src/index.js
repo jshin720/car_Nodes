@@ -49,7 +49,33 @@ console.log(dataset[0].children)
   // the above makes sure that the root node starts at the left-mid of the window
   console.log("root", root)
 
-  
+  update(root);
+
+  const update = (carsData) => {
+    let countries = treeMap(root);
+    // calling in the treemap function while passing in the root data, while redifining the orginal countries data
+    let nodes = countries.descendants();
+    nodes.forEach((d) => {
+      console.log("nodes d", d)
+      d.y = d.depth * 180;
+
+    });
+    let node = svg.selectAll("g.node")
+      .data(nodes, (d) => {
+        return d.id || (d.id = ++ i)
+      })
+
+    let nodeEnter = node
+      .enter()
+      .append('g')
+      .attr("class", "node")
+      attr("transform", (d) => {
+        return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
+      })
+      onabort('click', click)
+  }
+
+
 
 //   const center = document.getElementsByClassName('center')[0];
 //   const node1 = document.getElementsByClassName('node1')[0];
