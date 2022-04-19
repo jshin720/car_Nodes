@@ -6,11 +6,14 @@ import tesCars from "./usBrands/tesCars";
 
 
 const uS = {
-  Cadillac: cadCars,
-  Chevrolet: chevCars,
-  Ford: forCars,
-  Jeep: jeepCars,
-  Tesla: tesCars
+  name: "USA",
+  children: [
+    cadCars,
+    chevCars,
+    forCars,
+    jeepCars,
+    tesCars
+  ]
 }
 
 export default uS;

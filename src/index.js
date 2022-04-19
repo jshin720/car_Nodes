@@ -1,4 +1,5 @@
 import countries from "./scripts/countries"
+import * as d3 from "d3"
 
 document.addEventListener('DOMContentLoaded', () => {
   const center = document.getElementsByClassName('center')[0];
@@ -12,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // fetchCarInfo();
   // console.log(test);
 
-  console.log("countries object", countries)
+  console.log("countries object", Object.entries(countries))
 
   center.addEventListener('click', () => {
     // let countries = [USA, Korea, Japan, Italy, Germany, Uk];
