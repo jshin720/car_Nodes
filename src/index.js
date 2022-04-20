@@ -1,5 +1,6 @@
 import countries from "./scripts/countries"
 import * as d3 from "d3"
+import { transition } from "d3"
 
 document.addEventListener('DOMContentLoaded', () => {
   const dataset = [countries]
@@ -40,9 +41,9 @@ console.log(dataset[0].children)
 
   const treeMap = d3.tree().size([height, width]);
   root = d3.hierarchy(countries, (d) => {
-    console.log("d",d.children)
+    // console.log("d", d.children)
     return d.children
-  })
+  });
 
   root.x0 = height/2;
   root.y0 = 0;
@@ -51,56 +52,116 @@ console.log(dataset[0].children)
 
   update(root);
 
-  // const update = (carsData) => {
-  //   let countries = treeMap(root);
-  //   // calling in the treemap function while passing in the root data, while redifining the orginal countries data
-  //   let nodes = countries.descendants();
-  //   nodes.forEach((d) => {
-  //     console.log("nodes d", d)
-  //     d.y = d.depth * 180;
-
-  //   });
-  //   let node = svg.selectAll("g.node")
-  //     .data(nodes, (d) => {
-  //       return d.id || (d.id = ++ i)
-  //     })
-
-  //   let nodeEnter = node
-  //     .enter()
-  //     .append('g')
-  //     .attr("class", "node")
-  //     .attr("transform", (d) => {
-  //       return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
-  //     })
-  //     .on('click', click)
-  //     console.log("nodes")
-  // }
-
   function update(carsData) {
     let countries = treeMap(root);
     // calling in the treemap function while passing in the root data, while redifining the orginal countries data
     let nodes = countries.descendants();
     nodes.forEach((d) => {
-      console.log("nodes d", d)
+      // console.log("nodes d", d)
       d.y = d.depth * 180;
 
     });
     let node = svg.selectAll("g.node")
       .data(nodes, (d) => {
         return d.id || (d.id = ++i)
-      })
+      });
 
     let nodeEnter = node
       .enter()
       .append('g')
       .attr("class", "node")
       .attr("transform", (d) => {
-      return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
+        return "translate(" + carsData.y0 + ", " + carsData.x0 + ")";
     })
-    .on('click', click)
+    .on('click', click);
+    // "click is the event listener and click is a function gettingg called into the .on method"
     console.log("nodes")
+
+    nodeEnter
+      .append("circle")
+      .attr("class", "node")
+      .attr("r", 0)
+      .style("fill", (d) => {
+        console.log("nodeEnter d", d)
+        return d._children ? "red" : "black";
+      })
+      
+
+      nodeEnter
+        .append("text")
+        .attr('dy', '.35em')
+        .attr('x', (d) => {
+          return d.children || d.children ? -13 : 13
+        })
+        .attr("text-anchor", (d) => {
+          return d.children || d._children ? "end" : "start"
+        })
+        .text((d) => {
+          return d.data.name;
+        })
+
+    let nodeUpdate = nodeEnter.merge(node);
+
+    //making the new  nodes and transitions for the children and
+    nodeUpdate
+      .transition()
+      .duration(duration) // already made a variable for duration on line 39
+      .attr("transform", (d) => {
+          return "translate(" + d.y + ", " + d.x + ")"; 
+      });
+      
+      nodeUpdate
+      .select('circle.node') // this refers to the "node" on line 81 
+      .attr("r", 10)
+      .style('fill', (d) => {
+        return d._children ? "red" : "black"
+      })
+      .attr("cursor", "pointer");
+      
+      nodeExit = node 
+        .exit()
+        .transition()
+        .duration(duration)
+        .attr("transform", (d) => {
+          return "translate("+ carsData.y + ", " + carsData.x + ")"
+        })
+        .remove();
+
+      nodeExit
+        .select("cirle")
+        .attr("r", 0);
+        
+      nodeExit
+        .select("text")
+        .style("fill-opacity", 0);
+
+      // to store the original positions of the nodes
+      nodes.forEach((d) => {
+        d.x0 = d.x;
+        d.y0 = d.y;
+      })
+      function click(event, d) {
+        if(d.children) {
+          d._children = d.children;
+          d.children = null;
+        } else {
+          d.children = d._children;
+          d._children = null;
+        }
+        update(d);
+      }
+
+      //lines that connect between the links 
+      function diagonal(s, d) {
+        path = `M ${s.y} ${s.x}
+          C ${(s.y + d.y) / 2} ${s.x}
+            ${(s.y + d.y) / 2} ${s.x}`
+
+      }
+      
   }
 
+  
 
 //   const center = document.getElementsByClassName('center')[0];
 //   const node1 = document.getElementsByClassName('node1')[0];
