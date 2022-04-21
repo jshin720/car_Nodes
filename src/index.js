@@ -1,5 +1,6 @@
 import countries from "./scripts/countries"
 import * as d3 from "d3"
+import { count } from "d3";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -61,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let countries = treeMap(root);
     // calling in the treemap function while passing in the root data, while redifining the orginal countries data
     let nodes = countries.descendants(); // actual children node -- returns an array 
-    // console.log("nodes", nodes)
+    // console.log("nodes", countries.links())
     nodes.forEach((d) => {
       // console.log("nodes d", d.children)
       d.y = d.depth * 300; // depth is the length of the path from the node up to the root
@@ -77,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .append('g')
       .attr("class", "node")
       .attr("transform", (d) => {
-        return "translate(" + source.y0 + ", " + source.x0 + ")"; // this is the parent position  (root.x0, root.y0)
+        return "translate(" + source.y0 + "," + source.x0 + ")"; // this is the parent position  (root.x0, root.y0)
       })
       .on('click', click);
     // "click is the event listener and click is a function getting called into the .on method"
@@ -95,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nodeEnter
       .append("text")
-      .attr('dy', '.35em')
+      .attr('dy', '.30em')
       .attr('x', (d) => {
         return d.children || d._children ? -13 : 13
       })
@@ -113,12 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
       .transition()
       .duration(duration) // already made a variable for duration on line 39
       .attr("transform", (d) => {
-        return "translate(" + d.y + ", " + d.x + ")";
+        return "translate(" + d.y + "," + d.x + ")";
       });
 
     nodeUpdate
       .select('circle.node') // this refers to the "node" on line 81 
-      .attr("r", 5)
+      .attr("r", 8)
       .style('fill', (d) => {
         return d._children ? "red" : "black"
       })
@@ -129,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .transition()
       .duration(duration)
       .attr("transform", (d) => {
-        return "translate(" + source.y + ", " + source.x + ")"
+        return "translate(" + source.y + "," + source.x + ")"
       })
       .remove();
 
@@ -142,64 +143,31 @@ document.addEventListener('DOMContentLoaded', () => {
       .style("fill-opacity", 0);
 
 
-    // // Update the links…
-    // var link = svg.selectAll("path.link")
-    //   .data(links, function (d) {
-    //     return d.target.id;
-    //   });
+    const connections = svg.append("g").selectAll("path")
+      .data(countries.links());
+    connections.enter().append("path")
+      .attr("d", (d) => {
 
-    // // Enter any new links at the parent's previous position.
-    // link.enter().insert("path", "g")
-    //   .attr("class", "link")
-    //   .attr("d", function (d) {
-    //     var o = {
-    //       x: source.x0,
-    //       y: source.y0
-    //     };
-    //     return diagonal({
-    //       source: o,
-    //       target: o
-    //     });
-    //   });
-
-    // // Transition links to their new position.
-    // link.transition()
-    //   .duration(duration)
-    //   .attr("d", diagonal);
-
-    // // Transition exiting nodes to the parent's new position.
-    // link.exit().transition()
-    //   .duration(duration)
-    //   .attr("d", function (d) {
-    //     var o = {
-    //       x: source.x,
-    //       y: source.y
-    //     };
-    //     return diagonal({
-    //       source: o,
-    //       target: o
-    //     });
-    //   })
-    //   .remove();
+      })
 
    
-
-   
-
     //lines that connect between the nodes 
     
     function diagonal(s, d) { // s = source and d = destination
       console.log("source", s)
       console.log("destination", d)
       let path = `M ${s.y} ${s.x}
-      C ${(s.y + d.y) / 2} ${s.x}
-        ${(s.y + d.y) / 2} ${d.x}
-        ${d.y} ${d.x}`;
+      C ${(s.y + d.y) / 2} ${s.x} 
+        ${(s.y + d.y) / 2} ${d.x} 
+        ${d.y} ${d.x}`; // end point 
       return path;
     }
+    //lines 163 and 164 are control points for the lines 
+    // line 165 is the end point for destination points
+    // M is the starting point or node 
+    // C is the control points for the lines 
 
-
-    // console.log("countries", countries.descendants())
+    // console.log("countries", countries.descendants().slice(1))
     const links = countries.descendants().slice(1);
     const link = svg.selectAll('path.link')
       .data(links, (d) => {
@@ -222,6 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .transition()
       .duration(duration)
       .attr("d", (d) => {
+        console.log("linkupdate", d)
         return diagonal(d, d.parent);
       })
     const linkExit = link
@@ -251,7 +220,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  let nodes = treeMap(root).descendants()
+  let nodes = treeMap(root).descendants();
 
   nodes.forEach((d) => {
     if (d.children) {

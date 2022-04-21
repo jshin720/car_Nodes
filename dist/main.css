@@ -140,3 +140,8 @@ body {
   width: 30vw;
   height: 38vh;
 }
+
+.link {
+  fill: none;
+  stroke: blue;
+}
