@@ -180,8 +180,8 @@ console.log("height", height)
       .attr("class", "link")
       .attr('d', (d) => {
         let o = {
-          x: source.parent ? source.parent.x : source.x0,
-          y: source.parent ? source.parent.y : source.y0
+          x: source.parent ? source.x : source.x0,
+          y: source.parent ? source.y : source.y0
         };
         console.log("linkenter-d", d)
         console.log("linkenter-o", o)
@@ -204,8 +204,8 @@ console.log("height", height)
       .duration(duration)
       .attr("d", (d) => {
         let o = {
-          x: source.x0,
-          y: source.y0
+          x: source.parent ? source.x : source.x0,
+          y: source.parent ? source.y : source.y0
         };
         console.log("linkexit-d", d)
         console.log("linkexit- o", o)
