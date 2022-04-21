@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     bottom: 10,
     left: 100
   };
-  let width = 2500 - margin.left - margin.right;
-  let height = 2500 - margin.top - margin.bottom;
-
+  let width = 1500 - margin.left - margin.right;
+  let height = 250 - margin.top - margin.bottom;
+console.log("height", height)
   // setting  margins for the svg so inner svg won't cut off and will be within the main svg window 
 
   const svg = d3.select(".car-tree") // calling the class name of "class of car-tree"
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
   root.x0 = height / 2;
   root.y0 = 0;
   // the above makes sure that the root node starts at the left-mid of the window
-  // console.log("root", root)
+  console.log("root", root)
 
 
 
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // console.log("nodes", countries.links())
     nodes.forEach((d) => {
       // console.log("nodes d", d.children)
-      d.y = d.depth * 300; // depth is the length of the path from the node up to the root
+      d.y = d.depth * 450; // depth is the length of the path from the node up to the root
 
     });
     let node = svg.selectAll("g.node")
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .append('g')
       .attr("class", "node")
       .attr("transform", (d) => {
-        return "translate(" + source.y0 + "," + source.x0 + ")"; // this is the parent position  (root.x0, root.y0)
+        return "translate(" + source.y + "," + source.x + ")"; // this is the parent position  (root.x0, root.y0)
       })
       .on('click', click);
     // "click is the event listener and click is a function getting called into the .on method"
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     nodeEnter
       .append("text")
-      .attr('dy', '.30em')
+      .attr('dy', '.35em')
       .attr('x', (d) => {
-        return d.children || d._children ? -13 : 13
+        return d.children || d._children ? -15 : 15
       })
       .attr("text-anchor", (d) => {
         return d.children || d._children ? "end" : "start"
@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', () => {
     //lines that connect between the nodes 
     
     function diagonal(s, d) { // s = source and d = destination
-      console.log("source", s)
-      console.log("destination", d)
+      // console.log("source", s)
+      // console.log("destination", d)
       let path = `M ${s.y} ${s.x}
       C ${(s.y + d.y) / 2} ${s.x} 
         ${(s.y + d.y) / 2} ${d.x} 
@@ -171,6 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const links = countries.descendants().slice(1);
     const link = svg.selectAll('path.link')
       .data(links, (d) => {
+        
         return d.id;
       });
     const linkEnter = link
@@ -179,9 +180,12 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr("class", "link")
       .attr('d', (d) => {
         let o = {
-          x: source.x0,
-          y: source.y0
+          x: source.parent ? source.parent.x : source.x0,
+          y: source.parent ? source.parent.y : source.y0
         };
+        console.log("linkenter-d", d)
+        console.log("linkenter-o", o)
+        console.log("linkenter-source", source)
         return diagonal(o, o)
       });
 
@@ -190,7 +194,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .transition()
       .duration(duration)
       .attr("d", (d) => {
-        console.log("linkupdate", d)
+        console.log("linkupdate-d", d)
+      
         return diagonal(d, d.parent);
       })
     const linkExit = link
@@ -202,6 +207,8 @@ document.addEventListener('DOMContentLoaded', () => {
           x: source.x0,
           y: source.y0
         };
+        console.log("linkexit-d", d)
+        console.log("linkexit- o", o)
         return diagonal(o, o);
       })
       .remove();
@@ -216,6 +223,8 @@ document.addEventListener('DOMContentLoaded', () => {
       d.children = d._children;
       d._children = null;
     }
+   
+
     update(d);
   }
 
@@ -224,6 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   nodes.forEach((d) => {
     if (d.children) {
+      // console.log("click", d.children)
       d._children = d.children;
       d.children = null;
     } else {
