@@ -1,6 +1,6 @@
 const jagCars = {
   name: "Jaguar",
-  children: [
+  _children: [
     {
       name: "XF",
       price: "$45,300",

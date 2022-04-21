@@ -7,7 +7,7 @@ import vwCars from './gBrands/vwCars';
 
 const germany = {
   name: "Germany",
-  children: [
+  _children: [
     audCars,
     bmwCars,
     mbCars,

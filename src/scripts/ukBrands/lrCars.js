@@ -1,6 +1,6 @@
 const lrCars = {
   name: "Range Rover",
-  children: [
+  _children: [
     {
       name: "EVOQUE",
       price: "$45,000",

@@ -1,6 +1,6 @@
 const ciCars = {
   name: "Citroen",
-  children: [
+  _children: [
     {
       name: "AMI",
       price: "N/A",

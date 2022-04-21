@@ -7,7 +7,7 @@ import tesCars from "./usBrands/tesCars";
 
 const uS = {
   name: "USA",
-  children: [
+  _children: [
     cadCars,
     chevCars,
     forCars,

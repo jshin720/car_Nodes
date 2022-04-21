@@ -1,6 +1,6 @@
 const bentCars = {
   name: "Bently",
-  children: [
+  _children: [
     {
       name: "CONTINENTAL GT V8",
       price: "$222,700",

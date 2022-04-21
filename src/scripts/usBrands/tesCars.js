@@ -1,6 +1,6 @@
 const tesCars = {
   name: "Tesla",
-  children: [
+  _children: [
     {
       name: "Model S",
       price: "$99,990",

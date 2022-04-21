@@ -1,6 +1,6 @@
 const buCars = {
   name: "Bugatti",
-  children: [
+  _children: [
     {
       name: "BUGATTI CHIRON SPORT",
       price: "$3,300,000",

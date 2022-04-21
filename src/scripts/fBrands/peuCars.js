@@ -1,6 +1,6 @@
 const peuCars = {
   name: "Puegeot",
-  children: [
+  _children: [
     {
       name: "e-208",
       price: "£27,225",

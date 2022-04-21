@@ -1,6 +1,6 @@
 const niCars = {
   name: "Nissan",
-  children: [
+  _children: [
     {
       name: "Altima",
       price: "$31,985",

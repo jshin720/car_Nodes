@@ -1,6 +1,6 @@
 const vwCars = {
   name: "VolkWagen",
-  children: [
+  _children: [
     {
       name: "Golf GTI",
       price: "$29,880",

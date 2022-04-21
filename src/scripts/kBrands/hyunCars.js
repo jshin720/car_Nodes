@@ -1,6 +1,6 @@
 const hyunCars = {
   name: "Hyundai",
-  children: [
+  _children: [
     {
       name: "VELOSTER N",
       price: "$32,500",

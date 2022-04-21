@@ -1,6 +1,6 @@
 const maCars = {
   name: "Maserati",
-  children: [
+  _children: [
     {
       name: "Ghibli Trofeo",
       price: "$115,085",

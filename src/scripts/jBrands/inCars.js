@@ -1,6 +1,6 @@
 const inCars = {
   name: "Infiniti",
-  children: [
+  _children: [
     {
       name: "Q50",
       price: "$42,100",

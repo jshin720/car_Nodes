@@ -1,6 +1,6 @@
 const chevCars = {
   name: "Chevrolet",
-  children: [
+  _children: [
     {
       name: "BOLT EUV",
       price: "$33,500",

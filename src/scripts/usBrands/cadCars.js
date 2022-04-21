@@ -1,6 +1,6 @@
 const cadCars = {
   name: "Cadillac",
-  children: [
+  _children: [
     {
       name: "LYRIQ",
       price: "$59,990",

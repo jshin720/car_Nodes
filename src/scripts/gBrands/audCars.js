@@ -1,6 +1,6 @@
 const audCars = {
   name: "Audi",
-  children: [
+  _children: [
     {
       name: "Rs3",
       price: "$60,000",

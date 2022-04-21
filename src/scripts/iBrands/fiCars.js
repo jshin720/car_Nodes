@@ -1,6 +1,6 @@
 const fiCars = {
   name: "Fiat",
-  children: [
+  _children: [
     {
       name: "500X Sport",
       price: "$28,265",

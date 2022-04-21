@@ -9,7 +9,7 @@ import  uS  from "./us"
 
 const countries = {
   name: "Countries",
-  children: 
+  _children: 
   [
     france,
     germany,

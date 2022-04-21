@@ -5,7 +5,7 @@ import kiaCars from "./kBrands/kiaCars";
 
 const korea = {
   name: "South Korea",
-  children: [
+  _children: [
     genCars,
     hyunCars,
     kiaCars

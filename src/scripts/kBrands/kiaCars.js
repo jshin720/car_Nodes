@@ -1,6 +1,6 @@
 const kiaCars = {
   name: "Kia",
-  children: [
+  _children: [
   {
     name: "Niro EV",
     price: "$39,990",

@@ -1,6 +1,6 @@
 const lotCars = {
   name: "Lotus",
-  children: [
+  _children: [
     {
       name: "Eletre",
       price: "$120,000 est",

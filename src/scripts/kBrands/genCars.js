@@ -1,6 +1,6 @@
 const genCars = {
   name: "Genesis",
-  children: [
+  _children: [
     {
       name: "G70",
       price: "$44,450",

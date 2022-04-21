@@ -1,6 +1,6 @@
 const ferCars = {
   name: "Ferrari",
-  children: [
+  _children: [
     {
       name: "812 GTS",
       price: "$370,000",

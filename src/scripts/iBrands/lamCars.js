@@ -1,6 +1,6 @@
 const lamCars = {
   name: "Lamborghini",
-  children: [
+  _children: [
     {
       name: "Lamborghini Aventador SVJ",
       price: "$517,770",

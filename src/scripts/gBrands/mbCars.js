@@ -1,6 +1,6 @@
 const mbCars = {
   name: "Mercedes Benz",
-  children: [
+  _children: [
     {
       name: "AMG C 43 Coupe",
       price: "$60,500",

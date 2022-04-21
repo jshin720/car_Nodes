@@ -1,6 +1,6 @@
 const mcCars = {
   name: "McClaren",
-  children: [
+  _children: [
     {
       name: "765LT",
       price: "$382,500",

@@ -1,6 +1,6 @@
 const jeepCars = {
   name: "Jeep",
-  children: [
+  _children: [
     {
       name: "New Grand Cherokee",
       price: "$38,720",

@@ -1,6 +1,6 @@
 const lexCars = {
   name: "Lexus",
-  children: [
+  _children: [
     {
       name: "Is500",
       price: "$57,575",
