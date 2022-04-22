@@ -1,6 +1,5 @@
 import countries from "./scripts/countries"
 import * as d3 from "d3"
-import { count } from "d3";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bottom: 10,
     left: 100
   };
-  let width = 1500 - margin.left - margin.right;
+  let width = 2500 - margin.left - margin.right;
   let height = 250 - margin.top - margin.bottom;
 console.log("height", height)
   // setting  margins for the svg so inner svg won't cut off and will be within the main svg window 
@@ -80,7 +79,8 @@ console.log("height", height)
       .attr("transform", (d) => {
         return "translate(" + source.y + "," + source.x + ")"; // this is the parent position  (root.x0, root.y0)
       })
-      .on('click', click);
+      .on('click', click)
+      
     // "click is the event listener and click is a function getting called into the .on method"
     // console.log("nodes")
 
@@ -105,7 +105,7 @@ console.log("height", height)
       })
       .text((d) => {
         return d.data.name;
-      })
+      });
 
     let nodeUpdate = nodeEnter.merge(node);
 
@@ -115,7 +115,8 @@ console.log("height", height)
       .duration(duration) // already made a variable for duration on line 39
       .attr("transform", (d) => {
         return "translate(" + d.y + "," + d.x + ")";
-      });
+      })
+  
 
     nodeUpdate
       .select('circle.node') // this refers to the "node" on line 81 
@@ -123,7 +124,8 @@ console.log("height", height)
       .style('fill', (d) => {
         return d._children ? "red" : "black"
       })
-      .attr("cursor", "pointer");
+      .attr("cursor", "pointer")
+      
 
     const nodeExit = node
       .exit()
@@ -143,14 +145,27 @@ console.log("height", height)
       .style("fill-opacity", 0);
 
 
-    const connections = svg.append("g").selectAll("path")
-      .data(countries.links());
-    connections.enter().append("path")
-      .attr("d", (d) => {
+    // const connections = svg.append("g").selectAll("path")
+    //   .data(countries.links());
+    // connections.enter().append("path")
+    //   .attr("d", (d) => {
 
-      })
+    //   })
+    // this creates the tooltip
+  
 
-   
+    // function mouseover() {
+    //   console.log("mouseover", source)
+    //   if (source.depth === 3) {
+    //     tooltip
+    //       .style("opacity", 1)
+    //   } else {
+    //     tooltip
+    //       .style("opacity", 0)
+    //   }
+    // }
+
+    
     //lines that connect between the nodes 
     
     function diagonal(s, d) { // s = source and d = destination
@@ -183,9 +198,9 @@ console.log("height", height)
           x: source.parent ? source.x : source.x0,
           y: source.parent ? source.y : source.y0
         };
-        console.log("linkenter-d", d)
-        console.log("linkenter-o", o)
-        console.log("linkenter-source", source)
+        // console.log("linkenter-d", d)
+        // console.log("linkenter-o", o)
+        // console.log("linkenter-source", source)
         return diagonal(o, o)
       });
 
@@ -194,7 +209,7 @@ console.log("height", height)
       .transition()
       .duration(duration)
       .attr("d", (d) => {
-        console.log("linkupdate-d", d)
+        // console.log("linkupdate-d", d)
       
         return diagonal(d, d.parent);
       })
@@ -207,12 +222,23 @@ console.log("height", height)
           x: source.parent ? source.x : source.x0,
           y: source.parent ? source.y : source.y0
         };
-        console.log("linkexit-d", d)
-        console.log("linkexit- o", o)
+        // console.log("linkexit-d", d)
+        // console.log("linkexit- o", o)
         return diagonal(o, o);
       })
       .remove();
   }
+
+  const tooltip = d3.select(".car-tree")
+    .append("div")
+    .style("opacity", 0)
+    .attr("class", "tooltip")
+    .style("background-color", "blue")
+    .style("border", "solid")
+    .style("border-width", "2px")
+    .style("border-radius", "5px")
+    .style("padding", "5px")
+
 
   function click(e, d) {
     console.log("click", d)
@@ -223,10 +249,26 @@ console.log("height", height)
       d.children = d._children;
       d._children = null;
     }
-   
+    if (d.depth === 3) {
+      tooltip
+        .html("Name: " + d.data.name +
+          "<br> Price: " + d.data.price +
+          "<br> Type: " + d.data.type +
+          "<br> Engine " + d.data.engine +
+          "<br> Mileage " + d.data.gasMileage +
+          "<br> Description " + d.data.description
+        )
+        .style("left", (d.x + 70) + "px")
+        .style("top", (d.y) + "px")
+        .style("opacity", 1)
+    } else {
+      tooltip
+        .style("opacity", 0)
+    }
 
     update(d);
   }
+
 
 
   let nodes = treeMap(root).descendants();
