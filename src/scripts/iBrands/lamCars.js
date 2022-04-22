@@ -2,7 +2,7 @@ const lamCars = {
   name: "Lamborghini",
   _children: [
     {
-      name: "Lamborghini Aventador SVJ",
+      name: "Aventador SVJ",
       price: "$517,770",
       type: "Super Car",
       engine: "mid-mounted naturally aspirated 6.5-liter V-12",

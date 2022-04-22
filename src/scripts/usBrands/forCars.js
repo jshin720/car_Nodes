@@ -18,7 +18,7 @@ const forCars = {
       description: "The Ford Mustang Mach 1 didn't happen overnight. It's the culmination of years of development to the sixth-gen Stang bundled into a single package."
     },
     {
-      name: "Ford Bronco™ SUV",
+      name: "Bronco™ SUV",
       price: "$30,800",
       type: "SUV",
       engine: "3.0L Ti-VCT GTDI V-6",
@@ -26,7 +26,7 @@ const forCars = {
       description: "The 2022 Ford Bronco rocks a nostalgia-inducing design along with both civil on-road driving manners and big-time trail-tackling ability."
     },
     {
-      name: "Ford Mustang Mach-E",
+      name: "Mustang Mach-E",
       price: "$43,895)",
       type: "Electric SUV",
       engine: "70.0-kWh battery",
@@ -34,7 +34,7 @@ const forCars = {
       description: "The 2022 Ford Mustang Mach-E blends popular elements of the past and present in a highly desirable package that bodes well for the future of electric vehicles"
     },
     {
-      name: "Ford F-150 Raptor",
+      name: "F-150 Raptor",
       price: "$64,145",
       type: "Truck",
       engine: "3.5L PowerBoost™ Full Hybrid V6",

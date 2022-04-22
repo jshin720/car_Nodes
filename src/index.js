@@ -24,15 +24,18 @@ document.addEventListener('DOMContentLoaded', () => {
     bottom: 10,
     left: 100
   };
-  let width = 2500 - margin.left - margin.right;
+  // let width = 500 - margin.left - margin.right;
   let height = 250 - margin.top - margin.bottom;
+  let width = 640;
+  let padding = 1;
 console.log("height", height)
   // setting  margins for the svg so inner svg won't cut off and will be within the main svg window 
 
   const svg = d3.select(".car-tree") // calling the class name of "class of car-tree"
     .append("svg")
-    .attr("width", width + margin.right + margin.left)
-    .attr('height', height + margin.top + margin.bottom)
+    .attr("viewbox", "0 0 100 100")
+    // .attr("width", width + margin.right + margin.left)
+    // .attr('height', height + margin.top + margin.bottom)
     .append("g") // g is to group items together
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
 
@@ -40,11 +43,12 @@ console.log("height", height)
   const duration = 750;
   let root
 
-  const treeMap = d3.tree().size([height, width]); // makes the height and width of the tree
   root = d3.hierarchy(countries, (d) => {
     // console.log("d", d)
     return d._children
   });
+
+  const treeMap = d3.tree().size([height, width]); // makes the height and width of the tree
 
   root.x0 = height / 2;
   root.y0 = 0;
@@ -64,7 +68,7 @@ console.log("height", height)
     // console.log("nodes", countries.links())
     nodes.forEach((d) => {
       // console.log("nodes d", d.children)
-      d.y = d.depth * 450; // depth is the length of the path from the node up to the root
+      d.y = d.depth * 500; // depth is the length of the path from the node up to the root
 
     });
     let node = svg.selectAll("g.node")
@@ -120,7 +124,7 @@ console.log("height", height)
 
     nodeUpdate
       .select('circle.node') // this refers to the "node" on line 81 
-      .attr("r", 8)
+      .attr("r", 5)
       .style('fill', (d) => {
         return d._children ? "red" : "black"
       })
@@ -246,6 +250,7 @@ console.log("height", height)
       d._children = d.children;
       d.children = null;
     } else {
+      height = 5000
       d.children = d._children;
       d._children = null;
     }
@@ -284,4 +289,6 @@ console.log("height", height)
     }
     update(d);
   })
+
+ 
 })

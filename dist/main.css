@@ -145,3 +145,8 @@ body {
   fill: none;
   stroke: blue;
 }
+
+svg {
+  width: 98vw;
+  border: 2px solid black;
+}
