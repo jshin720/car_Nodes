@@ -18,47 +18,63 @@ document.addEventListener('DOMContentLoaded', () => {
   //     console.log(d[0])
   //   });
 
+  
+  
+  
+  // update(root);
+  
+  
   const margin = {
     top: 10,
     right: 40,
     bottom: 10,
-    left: 100
+    left: 150
   };
-  // let width = 500 - margin.left - margin.right;
-  let height = 250 - margin.top - margin.bottom;
-  let width = 640;
+
+  let width = 1250 - margin.left - margin.right;
+  var height = 725 - margin.top - margin.bottom;
+  // let width = 800;
   let padding = 1;
-console.log("height", height)
+console.log("height", d3)
   // setting  margins for the svg so inner svg won't cut off and will be within the main svg window 
 
   const svg = d3.select(".car-tree") // calling the class name of "class of car-tree"
     .append("svg")
-    .attr("viewbox", "0 0 100 100")
-    // .attr("width", width + margin.right + margin.left)
-    // .attr('height', height + margin.top + margin.bottom)
+    // .attr("viewbox", "0 0 100 100")
+    .attr("width", width + margin.right + margin.left)
+    .attr('height', height + margin.top + margin.bottom)
+    .attr("id", "tree-container")
     .append("g") // g is to group items together
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")")
+    // .call(zoom)
 
   let i = 0;
   const duration = 750;
   let root
 
+  
   root = d3.hierarchy(countries, (d) => {
     // console.log("d", d)
     return d._children
   });
-
+  
   const treeMap = d3.tree().size([height, width]); // makes the height and width of the tree
-
+  
   root.x0 = height / 2;
   root.y0 = 0;
   // the above makes sure that the root node starts at the left-mid of the window
   console.log("root", root)
+  
+  d3.select("svg")
+      .call(d3.zoom()
+        .scaleExtent([0.5, 5])
+        .on("zoom", (e) => {
+          // console.log("e", e)
+          svg.attr("transform", e.transform)
+        }));
 
 
-
-  // update(root);
-
+  // svg.call(zoom().on("zoom", 
 
 
   function update(source) {
@@ -66,11 +82,15 @@ console.log("height", height)
     // calling in the treemap function while passing in the root data, while redifining the orginal countries data
     let nodes = countries.descendants(); // actual children node -- returns an array 
     // console.log("nodes", countries.links())
+    
     nodes.forEach((d) => {
       // console.log("nodes d", d.children)
-      d.y = d.depth * 500; // depth is the length of the path from the node up to the root
+      d.y = d.depth * 500 // depth is the length of the path from the node up to the root
 
     });
+    
+    // const transform = d3.event.transform
+    // console.log("transform", transform)
     let node = svg.selectAll("g.node")
       .data(nodes, (d) => {
         return d.id || (d.id = ++i)
@@ -94,18 +114,34 @@ console.log("height", height)
       .attr("r", 0)
       .style("fill", (d) => {
         // console.log("nodeEnter d", d)
-        return d._children ? "red" : "black";
+        return d._children ? "black" : "#fff";
       })
 
 
     nodeEnter
       .append("text")
-      .attr('dy', '.35em')
+      .attr("class", "word")
+      .attr('dy', '.15em')
       .attr('x', (d) => {
-        return d.children || d._children ? -15 : 15
+        return d.children || d._children ? -75 : 16
       })
       .attr("text-anchor", (d) => {
-        return d.children || d._children ? "end" : "start"
+        return d.children || d._children ? "middle" : "start"
+      })
+      .attr("paint-order", "stroke")
+      .attr("stroke", "#fff")
+      .attr("stroke-width", 3)
+      .style("font-size", (d) => {
+        console.log("font-size", d)
+        if (d.depth === 3) {
+          return ".6em"
+        } else if(d.depth === 2) {
+          return "1em"
+        } else if (d.depth === 0) {
+          return "1.9em"
+        } else {
+          return "1.2em"
+        }
       })
       .text((d) => {
         return d.data.name;
@@ -124,9 +160,9 @@ console.log("height", height)
 
     nodeUpdate
       .select('circle.node') // this refers to the "node" on line 81 
-      .attr("r", 5)
+      .attr("r", 8)
       .style('fill', (d) => {
-        return d._children ? "red" : "black"
+        return d._children ? "black" : "#fff"
       })
       .attr("cursor", "pointer")
       
@@ -231,6 +267,52 @@ console.log("height", height)
         return diagonal(o, o);
       })
       .remove();
+
+
+    // d3.select("svg")
+    //   .call(d3.zoom()
+    //     .scaleExtent([0.5, 5])
+    //     .on("zoom", zoom));
+
+    // let zoom = d3.zoom()
+    //   .scaleExtent([0.5, 5])
+    //   .on("zoom", zoomed)
+
+    // d3.select("svg")
+    //   .call(zoom)
+
+    // function zoomed(e) {
+    //   let transform = e.transform;
+    //   console.log("zoomed", d3.zoom())
+
+    //   // var scale = d3.event.scale,
+    //   //   translation = d3.event.translate,
+    //   //   tbound = -h * scale,
+    //   //   bbound = h * scale,
+    //   //   lbound = (-w + m[1]) * scale,
+    //   //   rbound = (w - m[3]) * scale;
+    //   // // limit translation to thresholds
+    //   // translation = [
+    //   //   Math.max(Math.min(translation[0], rbound), lbound),
+    //   //   Math.max(Math.min(translation[1], bbound), tbound)
+    //   // ];
+    //   d3.selectAll("path")
+    //     .attr("transform", transform)
+    //   d3.selectAll("g.node")
+    //     .attr("transform", (d) => {
+    //       return "translate(" + (transform.x + d.y ) +"," + (transform.y + d.x) + ") scale(" + transform.k + ")"
+    //     })
+    //   // d3.selectAll("g.node")
+    //   //   .attr("transform", "translate(" + (transform.x + source.y) + "," + (transform.y + source.x) + ") scale(" + transform.k + ")")
+    //   // d3.selectAll(".link")
+    //   //   .attr("transform", (d) => {
+    //   //     console.log("zoomed -link", d)
+          
+    //   //     return "translate(" + (transform.x + d.y) + "," + (transform.y + d.x) + ") scale(" + transform.k + ")"
+    //   //   })
+    //     // "translate(" + translation + ")" +
+    //     //   " scale(" + scale + ")");
+    // }
   }
 
   const tooltip = d3.select(".car-tree")
@@ -250,7 +332,6 @@ console.log("height", height)
       d._children = d.children;
       d.children = null;
     } else {
-      height = 5000
       d.children = d._children;
       d._children = null;
     }
@@ -266,10 +347,16 @@ console.log("height", height)
         .style("left", (d.x + 70) + "px")
         .style("top", (d.y) + "px")
         .style("opacity", 1)
+        .on("mouseout", mouseout)
     } else {
       tooltip
         .style("opacity", 0)
-    }
+      }
+
+      function mouseout() {
+        tooltip
+          .style("opacity", 0)
+      }
 
     update(d);
   }
