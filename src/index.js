@@ -319,15 +319,15 @@ console.log("height", d3)
     .append("div")
     .style("opacity", 0)
     .attr("class", "tooltip")
-    .style("background-color", "blue")
+    .style("background-color", "#f7f2ed")
     .style("border", "solid")
     .style("border-width", "2px")
     .style("border-radius", "5px")
     .style("padding", "5px")
+   
 
 
   function click(e, d) {
-    console.log("click", d)
     if (d.children) {
       d._children = d.children;
       d.children = null;
@@ -337,23 +337,24 @@ console.log("height", d3)
     }
     if (d.depth === 3) {
       tooltip
-        .html("Name: " + d.data.name +
+        .html("<Brand name: " + d.parent.data.name +
+          "<br>Name: " + d.data.name +
           "<br> Price: " + d.data.price +
           "<br> Type: " + d.data.type +
-          "<br> Engine " + d.data.engine +
-          "<br> Mileage " + d.data.gasMileage +
-          "<br> Description " + d.data.description
+          "<br> Engine: " + d.data.engine +
+          "<br> Mileage: " + d.data.gasMileage +
+          "<br> Description: " + d.data.description
         )
-        .style("left", (d.x + 70) + "px")
+        .style("left", (d.x) + "px")
         .style("top", (d.y) + "px")
         .style("opacity", 1)
-        .on("mouseout", mouseout)
+        .on("click", closeClick)
     } else {
       tooltip
         .style("opacity", 0)
       }
 
-      function mouseout() {
+      function closeClick() {
         tooltip
           .style("opacity", 0)
       }

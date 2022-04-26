@@ -213,3 +213,32 @@ text.word {
 body {
   background-color: #eee5db;
 }
+
+.tooltip {
+  margin-top: 5px;
+}
+
+.footer-container {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border: 2px solid black;
+}
+#contact-container{
+  display: flex;
+  position: relative;
+  width: 50%;
+  font-size: 20px;
+  border: 2px solid blue ;
+}
+#intro-container{
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  flex-direction: column;
+  border: 2px solid greenyellow;
+}
+
+#instruction {
+  // border: 2px solid red;
+}
