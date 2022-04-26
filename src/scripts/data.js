@@ -7,10 +7,10 @@ const axios = require("axios")
 //   }
 // })
 //   .then(response => {
-//     console.log(response);
+//  
 //   })
 //   .catch(err => {
-//     console.error(err);
+//    
 //   });
 
 
@@ -25,7 +25,7 @@ const axios = require("axios")
 //     }
 //   };
 //   axios.request(options).then(function (response) {
-//     console.log(response.data);
+//     
 //   }).catch(function (error) {
 //     console.error(error);
 //   });

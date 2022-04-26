@@ -38,7 +38,7 @@ let pilot = new DataNode(null, null, 'Pilot');
 // let hCars = [accord, civic, crv, hrv, passport, pilot];
 let honda = new DataNode(null, 'Honda');
 honda.appendChildren([accord, civic, crv, hrv, passport, pilot]);
-console.log(honda)
+
 
 // honda = new DataNode(null, null, 'Honda');
 // let acura = new DataNode(null, null, 'Acura');

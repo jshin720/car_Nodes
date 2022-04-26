@@ -4,8 +4,7 @@ import * as d3 from "d3"
 
 document.addEventListener('DOMContentLoaded', () => {
   const dataset = [countries]
-  // console.log(countries)
-  // console.log(dataset[0].children)
+ 
   // d3.select("div")
   //   .append("p")
   //   .text("hello Word")
@@ -15,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //   .enter()
   //   .append("p")
   //   .text((d) => {
-  //     console.log(d[0])
+  
   //   });
 
   
@@ -35,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var height = 725 - margin.top - margin.bottom;
   // let width = 800;
   let padding = 1;
-console.log("height", d3)
+
   // setting  margins for the svg so inner svg won't cut off and will be within the main svg window 
 
   const svg = d3.select(".car-tree") // calling the class name of "class of car-tree"
@@ -54,7 +53,7 @@ console.log("height", d3)
 
   
   root = d3.hierarchy(countries, (d) => {
-    // console.log("d", d)
+    
     return d._children
   });
   
@@ -63,13 +62,13 @@ console.log("height", d3)
   root.x0 = height / 2;
   root.y0 = 0;
   // the above makes sure that the root node starts at the left-mid of the window
-  console.log("root", root)
+ 
   
   d3.select("svg")
       .call(d3.zoom()
         .scaleExtent([0.5, 5])
         .on("zoom", (e) => {
-          // console.log("e", e)
+     
           svg.attr("transform", e.transform)
         }));
 
@@ -81,16 +80,16 @@ console.log("height", d3)
     let countries = treeMap(root);
     // calling in the treemap function while passing in the root data, while redifining the orginal countries data
     let nodes = countries.descendants(); // actual children node -- returns an array 
-    // console.log("nodes", countries.links())
+  
     
     nodes.forEach((d) => {
-      // console.log("nodes d", d.children)
+      
       d.y = d.depth * 500 // depth is the length of the path from the node up to the root
 
     });
     
     // const transform = d3.event.transform
-    // console.log("transform", transform)
+   
     let node = svg.selectAll("g.node")
       .data(nodes, (d) => {
         return d.id || (d.id = ++i)
@@ -106,14 +105,14 @@ console.log("height", d3)
       .on('click', click)
       
     // "click is the event listener and click is a function getting called into the .on method"
-    // console.log("nodes")
+    
 
     nodeEnter
       .append("circle")
       .attr("class", "node")
       .attr("r", 0)
       .style("fill", (d) => {
-        // console.log("nodeEnter d", d)
+        
         return d._children ? "black" : "#fff";
       })
 
@@ -132,7 +131,7 @@ console.log("height", d3)
       .attr("stroke", "#fff")
       .attr("stroke-width", 3)
       .style("font-size", (d) => {
-        console.log("font-size", d)
+       
         if (d.depth === 3) {
           return ".6em"
         } else if(d.depth === 2) {
@@ -195,7 +194,7 @@ console.log("height", d3)
   
 
     // function mouseover() {
-    //   console.log("mouseover", source)
+    
     //   if (source.depth === 3) {
     //     tooltip
     //       .style("opacity", 1)
@@ -209,8 +208,7 @@ console.log("height", d3)
     //lines that connect between the nodes 
     
     function diagonal(s, d) { // s = source and d = destination
-      // console.log("source", s)
-      // console.log("destination", d)
+ 
       let path = `M ${s.y} ${s.x}
       C ${(s.y + d.y) / 2} ${s.x} 
         ${(s.y + d.y) / 2} ${d.x} 
@@ -222,7 +220,7 @@ console.log("height", d3)
     // M is the starting point or node 
     // C is the control points for the lines 
 
-    // console.log("countries", countries.descendants().slice(1))
+    
     const links = countries.descendants().slice(1);
     const link = svg.selectAll('path.link')
       .data(links, (d) => {
@@ -238,9 +236,7 @@ console.log("height", d3)
           x: source.parent ? source.x : source.x0,
           y: source.parent ? source.y : source.y0
         };
-        // console.log("linkenter-d", d)
-        // console.log("linkenter-o", o)
-        // console.log("linkenter-source", source)
+        
         return diagonal(o, o)
       });
 
@@ -249,7 +245,7 @@ console.log("height", d3)
       .transition()
       .duration(duration)
       .attr("d", (d) => {
-        // console.log("linkupdate-d", d)
+      
       
         return diagonal(d, d.parent);
       })
@@ -262,8 +258,7 @@ console.log("height", d3)
           x: source.parent ? source.x : source.x0,
           y: source.parent ? source.y : source.y0
         };
-        // console.log("linkexit-d", d)
-        // console.log("linkexit- o", o)
+       
         return diagonal(o, o);
       })
       .remove();
@@ -283,7 +278,7 @@ console.log("height", d3)
 
     // function zoomed(e) {
     //   let transform = e.transform;
-    //   console.log("zoomed", d3.zoom())
+    
 
     //   // var scale = d3.event.scale,
     //   //   translation = d3.event.translate,
@@ -306,7 +301,7 @@ console.log("height", d3)
     //   //   .attr("transform", "translate(" + (transform.x + source.y) + "," + (transform.y + source.x) + ") scale(" + transform.k + ")")
     //   // d3.selectAll(".link")
     //   //   .attr("transform", (d) => {
-    //   //     console.log("zoomed -link", d)
+    //  
           
     //   //     return "translate(" + (transform.x + d.y) + "," + (transform.y + d.x) + ") scale(" + transform.k + ")"
     //   //   })
@@ -368,7 +363,7 @@ console.log("height", d3)
 
   nodes.forEach((d) => {
     if (d.children) {
-      // console.log("click", d.children)
+    
       d._children = d.children;
       d.children = null;
     } else {
