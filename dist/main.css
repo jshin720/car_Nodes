@@ -8,140 +8,6 @@ h1 {
   color: black;
 }
 
-body {
-  background-image: url("https://github.com/jshin720/car_Nodes/blob/main/png/bg.jpg");
-}
-
-.main-node {
-  position: relative;
-  width: 24em;
-  height: 24em;
-  padding: 2.8em;
-  border: solid 1px white;
-  border-radius: 50%;
-  margin: 1.75em auto 0;
-  align-self: center;
-}
-
-.main-node div, a {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5em;
-  height: 4em;
-  margin: -2em;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 4em;
-}
-
-.center:hover, .node1:hover, .node2:hover, .node3:hover, .node4:hover, .node5:hover, .node6:hover {
-  transform: rotate();
-  background-color: skyblue;
-  z-index: 1;
-  width: 142px;
-  height: 120px;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 90px;
-  font-size: 29px;
-  font-weight: 600;
-}
-
-.center {
-  height: 50px;
-  width: 25px;
-  background-color: azure;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.node1 {
-  transform: translate(240px);
-  height: 200px;
-  width: 200px;
-  background-image: url("../png/us.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25%;
-  display: inline-block;
-  border: solid black 2px;
-}
-
-.node2 {
-  transform: rotate(60deg) translate(240px) rotate(-60deg);
-  height: 15px;
-  width: 15px;
-  background-image: url("../png/skflag.jpeg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25%;
-  display: inline-block;
-  border: solid black 2px;
-}
-
-.node3 {
-  transform: rotate(120deg) translate(240px) rotate(-120deg);
-  height: 15px;
-  width: 15px;
-  background-image: url("/png/japan.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25%;
-  display: inline-block;
-  border: solid black 2px;
-}
-
-.node4 {
-  transform: translate(-240px);
-  height: 15px;
-  width: 15px;
-  background-image: url("../png/italy.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25%;
-  display: inline-block;
-  border: solid black 2px;
-}
-
-.node5 {
-  transform: rotate(240deg) translate(240px) rotate(-240deg);
-  height: 15px;
-  width: 15px;
-  background-image: url("../png/germany.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25%;
-  display: inline-block;
-  border: solid black 2px;
-}
-
-.node6 {
-  transform: rotate(300deg) translate(240px) rotate(-300deg);
-  height: 15px;
-  width: 15px;
-  background-image: url("../png/uk.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 25%;
-  display: inline-block;
-  border: solid black 2px;
-}
-
-.carsImg {
-  position: absolute;
-  top: 20%;
-  left: 2%;
-  width: 30vw;
-  height: 38vh;
-}
-
 .link {
   fill: none;
   stroke: blue;
@@ -157,7 +23,6 @@ body {
 
 svg {
   background-color: #f7f2ed;
-  border: 2px solid black;
 }
 
 text.word {
@@ -175,28 +40,58 @@ body {
 }
 
 .tooltip {
-  margin-top: 5px;
+  margin: 10px;
 }
 
 .footer-container {
   display: flex;
   position: relative;
   justify-content: space-between;
-  border: 2px solid black;
+  flex-direction: row;
+  border-top: 1px solid lightgrey;
 }
 
-#contact-container {
+.social-links-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 15%;
+  height: 100%;
+  padding: 2px;
+}
+
+.social-links-container h3 {
+  font-size: 2em;
+}
+
+.social-links {
   display: flex;
   position: relative;
-  width: 50%;
-  font-size: 20px;
-  border: 2px solid blue;
+  flex-direction: column;
+  align-items: center;
+}
+
+.links-icons {
+  height: 5px;
+  width: 5px;
 }
 
 #intro-container {
   display: flex;
   position: relative;
+  width: 70%;
   justify-content: space-around;
   flex-direction: column;
-  border: 2px solid greenyellow;
+}
+
+.project-intro {
+  display: block;
+  text-align: center;
+  padding: 25px;
+}
+
+#instructions {
+  display: block;
+  text-align: center;
+  padding: 25px;
 }
