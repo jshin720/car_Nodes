@@ -2,14 +2,12 @@ Car nodes
 
 Background
 
-This Car Nodes is a visualization of cars, car makers, and the countries of where the brands are from. The point of ‘project’ is so show interactively there what countries, car makers are from and the current cars that the car maker has. And to show the user information on cars visually and interactively. The ‘project’ will have levels:
+This Car Nodes is a visualization of cars, car makers, and the countries of where the brands are from using D3.visualization. The point of ‘project’ is so show interactively in a tree node form  what countries, car makers are from and the current cars that the car maker has. And to show the user information on cars visually and interactively. The ‘project’ will have levels:
 
-1)	the top level being the county
+1)	the first level being the county
 2)	the 2nd level being the car maker
 3)	3rd level being the cars 
-4)	the last levle being the information of the specific car. 
-
-Every level will be design as node or item that will enlarge when hovered over it. When the item is enlarged it will show branches of the next lower level and once clicked it will switch over to that lower level. Up until it gets to the lowest level where information on the specific car is. 
+4)	the user is able to click on the car node to get more information 
 
 
 Functionality & MVPs
@@ -26,19 +24,18 @@ In addition, Car nodes will include:
 •	An about modal describing the background of the visualization. 
 
  
-https://wireframe.cc/bHc04f
+https://wireframe.cc/X3GlSR
 
 
-•	The circle represents the selectable nodes, that can lead to sub nodes;
+•	The circle represents the selectable nodes, that can lead to sub nodes in tree node form;
 •	The nav links include links to this project’s Github repo, my LinkedIn and the About Modal
-•	The back on the top of goes back one level and the Main goes back to the top level
+•	The last level can be click on for more information on the specific cars. 
 
 
 Technologies, Libraries, APIs
 
 This project will be implemented with the following technologies:
-•	The Kelly blue API will supply the information for the cars
-•	Canvas will be used for the design. 
+•	D3 visualization will be used for the design. 
 •	WebPack to bundle and transpile the source JS code
 
 Implementation Timeline
