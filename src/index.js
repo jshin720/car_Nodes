@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   let width = 1250 - margin.left - margin.right;
-  var height = 725 - margin.top - margin.bottom;
+  var height = 700 - margin.top - margin.bottom;
   // let width = 800;
   let padding = 1;
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return d.children || d._children ? "middle" : "start"
       })
       .attr("paint-order", "stroke")
-      .attr("stroke", "#e6e6fa")
+      .attr("stroke", "#dda0dd")
       .attr("stroke-width", 3)
       .style("font-size", (d) => {
        
@@ -322,11 +322,11 @@ document.addEventListener('DOMContentLoaded', () => {
       .style("font-weight", 700)
       .style("display", "flex")
       .style("position", "absolute")
-      .style("height", "20em")
-      .style("width", "20em")
-      .style("color", "red")
+      .style("height", "22em")
+      .style("width", "25em")
+      .style("color", "green")
       .style("text-align", "center")
-      // .style()
+      .style("padding", "10px")
       // .style()
    
 
