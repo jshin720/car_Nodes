@@ -30,8 +30,8 @@ text.word {
 }
 
 .node circle {
-  fill: #fff;
-  stroke: gold;
+  fill: #e6e6fa;
+  stroke: purple;
   stroke-width: 3px;
 }
 

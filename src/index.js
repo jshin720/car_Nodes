@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .attr("r", 0)
       .style("fill", (d) => {
         
-        return d._children ? "black" : "#fff";
+        return d._children ? "#87CEFA" : "#e6e6fa";
       })
 
 
@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return d.children || d._children ? "middle" : "start"
       })
       .attr("paint-order", "stroke")
-      .attr("stroke", "#fff")
+      .attr("stroke", "#e6e6fa")
       .attr("stroke-width", 3)
       .style("font-size", (d) => {
        
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .select('circle.node') // this refers to the "node" on line 81 
       .attr("r", 8)
       .style('fill', (d) => {
-        return d._children ? "black" : "#fff"
+        return d._children ? "#87CEFA" : "#e6e6fa"
       })
       .attr("cursor", "pointer")
       
@@ -312,17 +312,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const tooltip = d3.select(".car-tree")
     .append("div")
-    .style("opacity", 0)
-    .attr("class", "tooltip")
-    .style("background-color", "#f7f2ed")
-    .style("border", "solid")
-    .style("border-width", "2px")
-    .style("border-radius", "5px")
-    .style("padding", "5px")
+      .style("visibility", "hidden")
+      .attr("class", "tooltip")
+      .style("background-color", "beige")
+      .style("border", "solid")
+      .style("border-width", "2px")
+      .style("border-radius", "8px")
+      .style("padding", "5px")
+      .style("font-weight", 700)
+      .style("display", "flex")
+      .style("position", "absolute")
+      .style("height", "20em")
+      .style("width", "20em")
+      .style("color", "red")
+      .style("text-align", "center")
+      // .style()
+      // .style()
    
 
 
   function click(e, d) {
+    console.log("e", e)
+    console.log("d", d3)
     if (d.children) {
       d._children = d.children;
       d.children = null;
@@ -332,26 +343,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (d.depth === 3) {
       tooltip
-        .html("<Brand name: " + d.parent.data.name +
-          "<br>Name: " + d.data.name +
-          "<br> Price: " + d.data.price +
-          "<br> Type: " + d.data.type +
-          "<br> Engine: " + d.data.engine +
-          "<br> Mileage: " + d.data.gasMileage +
-          "<br> Description: " + d.data.description
-        )
-        .style("left", (d.x) + "px")
-        .style("top", (d.y) + "px")
-        .style("opacity", 1)
+      .html("<Brand name: " + d.parent.data.name +
+      "<br>Name: " + d.data.name +
+      "<br> Price: " + d.data.price +
+      "<br> Type: " + d.data.type +
+      "<br> Engine: " + d.data.engine +
+      "<br> Mileage: " + d.data.gasMileage +
+      "<br> Description: " + d.data.description
+      )
+        .style("right", 0)
+        .style("top", 12)
+        .style("visibility", "visible")
         .on("click", closeClick)
     } else {
       tooltip
-        .style("opacity", 0)
+        .style("visibility", "hidden")
       }
-
+console.log("tooltip", tooltip)
       function closeClick() {
         tooltip
-          .style("opacity", 0)
+          .style("visibility", "hidden")
       }
 
     update(d);
