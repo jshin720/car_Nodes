@@ -7628,9 +7628,10 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!************************!*\
   !*** ./src/index.scss ***!
   \************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nSassError: expected \"}\".\n    ╷\n279 │ }\n    │  ^\n    ╵\n  src/index.scss 279:2  root stylesheet\n    at processResult (/Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/webpack/lib/NormalModule.js:701:19)\n    at /Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/webpack/lib/NormalModule.js:807:5\n    at /Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/loader-runner/lib/LoaderRunner.js:399:11\n    at /Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/loader-runner/lib/LoaderRunner.js:251:18\n    at context.callback (/Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/loader-runner/lib/LoaderRunner.js:124:13)\n    at /Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/sass-loader/dist/index.js:54:7\n    at Function.call$2 (/Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/sass/sass.dart.js:96399:16)\n    at render_closure1.call$2 (/Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/sass/sass.dart.js:82305:12)\n    at _RootZone.runBinary$3$3 (/Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/sass/sass.dart.js:28284:18)\n    at _FutureListener.handleError$1 (/Users/jeffshin/Desktop/git/aa/Car_Nodes/car_Nodes/node_modules/sass/sass.dart.js:26806:21)");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9jYXJfTm9kZXMvLi9zcmMvaW5kZXguc2Nzcz85NzQ1Il0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSIsImZpbGUiOiIuL3NyYy9pbmRleC5zY3NzLmpzIiwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luXG5leHBvcnQge307Il0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./src/index.scss\n");
 
 /***/ }),
 
